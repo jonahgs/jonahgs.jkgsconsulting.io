@@ -1,0 +1,31 @@
+name: Build and Deploy TailwindCSS
+
+on:
+  push:
+    branches:
+      - main  # Runs when you push to the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm install tailwindcss postcss autoprefixer
+
+      - name: Build Tailwind CSS
+        run: npx tailwindcss -o assets/css/styles.min.css --minify
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages  # Deploy to the `gh-pages` branch
+          folder: .  # Deploy the entire repository

@@ -1,4 +1,19 @@
+@import "tailwindcss";
 /* css/styles.css */
+
+@layer base {
+  /* Global offset for anchor targets: Increase offset if needed */
+  [id] {
+    scroll-margin-top: 150px;  /* Increased from 80px to 150px (adjust as needed) */
+  }
+
+  /* Custom fade-out-up effect for mobile menu */
+  .fade-out-up {
+    opacity: 0;
+    transform: translateY(-20px); /* Moves menu 20px upward */
+  }
+}
+
 
 /* Custom Font */
 body {
