@@ -1,51 +1,79 @@
 @import "tailwindcss";
-/* css/styles.css */
 
 @layer base {
-  /* Global offset for anchor targets: Increase offset if needed */
+  /* Global offset for anchor targets */
   [id] {
-    scroll-margin-top: 150px;  /* Increased from 80px to 150px (adjust as needed) */
+    scroll-margin-top: 150px;
   }
 
-  /* Custom fade-out-up effect for mobile menu */
+  /* Fade-out-up effect for mobile menu */
   .fade-out-up {
     opacity: 0;
-    transform: translateY(-20px); /* Moves menu 20px upward */
+    transform: translateY(-15px);
+  }
+
+  /* Hero Section: pseudo-element for parallax-like background */
+  #hero {
+    position: relative;
+    /* The hero text container can remain as is. The background is handled by ::before. */
+    overflow: hidden; /* Ensures any scaled background doesn't cause overflow. */
+    min-height: 100vh; /* Ensure the hero fills at least the viewport height. */
+  }
+  #hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("assets/images/coaching-15.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* for a subtle parallax effect */
+    transform: scale(1.05);       /* slight zoom */
+    transition: transform 0.3s ease-in-out;
+    z-index: -1;                  /* behind hero content */
   }
 }
 
-
 /* Custom Font */
 body {
-    font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Custom Animations */
+
+/* FadeIn Keyframes & Class */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
   }
-  
-  /* Custom Animations */
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .animate-fadeIn {
-    animation: fadeIn 1s ease-out forwards;
+}
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* Bounce-Slight Keyframes & Class */
+@keyframes bounce-slight {
+  0%, 100% {
+    transform: translateY(0);
   }
-  
-  /* Bounce-Slight Animation for Icons */
-  @keyframes bounce-slight {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
+  50% {
+    transform: translateY(-5px);
   }
-  
-  .animate-bounce-slight {
-    animation: bounce-slight 0.5s ease-in-out;
-  }
-  
-  /* Smooth Scrolling */
-  html {
-    scroll-behavior: smooth;
-  }
-  /* Prevent any potential AOS animation on the footer */
-/* Prevent any AOS animation on the footer */
+}
+.animate-bounce-slight {
+  animation: bounce-slight 0.5s ease-in-out;
+}
+
+/* Smooth Scrolling for the Document */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent any potential AOS animation on the footer */
 footer,
 footer.aos-animate,
 footer.aos-init {
@@ -53,4 +81,3 @@ footer.aos-init {
   transform: none !important;
   transition: none !important;
 }
-  /* Additional custom styles can be added here */

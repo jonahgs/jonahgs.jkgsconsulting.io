@@ -2200,6 +2200,11 @@
     -webkit-font-smoothing: auto;
     -moz-osx-font-smoothing: auto;
   }
+  .placeholder-gray-500 {
+    &::placeholder {
+      color: var(--color-gray-500);
+    }
+  }
   .accent-auto {
     accent-color: auto;
   }
@@ -2384,9 +2389,17 @@
   .transition-normal {
     transition-behavior: normal;
   }
+  .duration-200 {
+    --tw-duration: 200ms;
+    transition-duration: 200ms;
+  }
   .duration-300 {
     --tw-duration: 300ms;
     transition-duration: 300ms;
+  }
+  .duration-500 {
+    --tw-duration: 500ms;
+    transition-duration: 500ms;
   }
   .ease-in {
     --tw-ease: var(--ease-in);
@@ -2814,9 +2827,19 @@
   [id] {
     scroll-margin-top: 150px;
   }
+  #hero {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
+  .hero-offset {
+    scroll-margin-top: 80px;
+  }
   .fade-out-up {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-15px);
   }
 }
 body {
