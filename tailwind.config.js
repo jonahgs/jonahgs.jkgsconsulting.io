@@ -13,18 +13,32 @@ module.exports = {
     // If you also need default spacing (p-4, m-8), text sizes, etc.:
     spacing: defaultTheme.spacing,
     fontSize: defaultTheme.fontSize,
-    // or just spread the entire defaultTheme to keep all the old goodies:
-    // ...defaultTheme,
-
     extend: {
       fontFamily: {
         // Keep Poppins plus the normal Tailwind sans stack
         sans: ["Poppins", ...defaultTheme.fontFamily.sans],
       },
-      // Any other custom additions...
+      // Custom keyframes for the animated gradient
+      keyframes: {
+        gradientShift: {
+          "0%": { "background-position": "0% 50%" },
+          "50%": { "background-position": "100% 50%" },
+          "100%": { "background-position": "0% 50%" },
+        },
+      },
+      // Custom animation using the keyframes above
+      animation: {
+        gradient: "gradientShift 15s ease infinite",
+      },
+      // Custom background size utility (optional; you can also use arbitrary values)
+      backgroundSize: {
+        "200": "200% 200%",
+      },
     },
   },
   plugins: [
-    "@tailwindcss/postcss"
-    ("@tailwindcss/forms")],
+    // Make sure to use require() for plugins:
+    require("@tailwindcss/forms")
+    // You can add other plugins here as needed.
+  ],
 };

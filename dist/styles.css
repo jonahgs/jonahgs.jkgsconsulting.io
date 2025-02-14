@@ -728,9 +728,6 @@
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
   }
-  .mt-16 {
-    margin-top: calc(var(--spacing) * 16);
-  }
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
@@ -1430,9 +1427,6 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-  .overflow-hidden {
-    overflow: hidden;
-  }
   .scroll-auto {
     scroll-behavior: auto;
   }
@@ -1871,6 +1865,9 @@
   }
   .py-16 {
     padding-block: calc(var(--spacing) * 16);
+  }
+  .pt-16 {
+    padding-top: calc(var(--spacing) * 16);
   }
   .pr-10 {
     padding-right: calc(var(--spacing) * 10);
@@ -2827,19 +2824,26 @@
   [id] {
     scroll-margin-top: 150px;
   }
+  .fade-out-up {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
   #hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+  }
+  #hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("assets/images/coaching-15.jpeg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
-  }
-  .hero-offset {
-    scroll-margin-top: 80px;
-  }
-  .fade-out-up {
-    opacity: 0;
-    transform: translateY(-15px);
+    z-index: -1;
   }
 }
 body {
