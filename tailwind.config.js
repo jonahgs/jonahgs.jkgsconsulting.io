@@ -4,7 +4,9 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   mode: "jit",
-  content: ["./*.html", "./css/*.{css,html}", "./js/**/*.{js,html}"],
+  content: ["./**/*.html", "./css/**/*.{css,html}", "./js/**/*.{js,html}"],
+  safelist: ["sm:block"],
+
   theme: {
     // Bring back the typical Tailwind colors:
     colors: {
@@ -32,13 +34,13 @@ module.exports = {
       },
       // Custom background size utility (optional; you can also use arbitrary values)
       backgroundSize: {
-        "200": "200% 200%",
+        200: "200% 200%",
       },
     },
   },
   plugins: [
     // Make sure to use require() for plugins:
-    require("@tailwindcss/forms")
+    require("@tailwindcss/forms"),
     // You can add other plugins here as needed.
   ],
 };

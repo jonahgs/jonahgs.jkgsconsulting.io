@@ -6,13 +6,22 @@
     <title>JKGS Consulting - Navigating Sustainable Growth</title>
 
     <!-- Primary SEO Meta Tags -->
-    <meta name="description" content="JKGS Consulting provides expert guidance in business consulting, culinary education, funding solutions, and product innovation to help you navigate sustainable growth." />
-    <meta name="keywords" content="business consulting, culinary education, funding solutions, product innovation, JKGS Consulting, Ottawa, Ontario" />
+    <meta
+      name="description"
+      content="JKGS Consulting provides expert guidance in business consulting, culinary education, funding solutions, and product innovation to help you navigate sustainable growth."
+    />
+    <meta
+      name="keywords"
+      content="business consulting, culinary education, funding solutions, product innovation, JKGS Consulting, Ottawa, Ontario"
+    />
     <meta name="theme-color" content="#064e3b" />
 
     <!-- Open Graph Tags (Social Media) -->
     <meta property="og:title" content="JKGS Consulting" />
-    <meta property="og:description" content="Expert consulting to drive your business forward with strategic insights and innovation." />
+    <meta
+      property="og:description"
+      content="Expert consulting to drive your business forward with strategic insights and innovation."
+    />
     <meta property="og:image" content="assets/images/og-image.jpeg" />
     <meta property="og:url" content="https://www.jkgsconsulting.com" />
     <meta property="og:type" content="website" />
@@ -21,10 +30,16 @@
     <link rel="icon" href="assets/images/logo.png" type="image/png" />
 
     <!-- Google Fonts (Custom Font: Poppins) -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- AOS CSS for animations -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
 
     <!-- Compiled Tailwind CSS -->
     <link rel="stylesheet" href="dist/styles.css" />
@@ -33,19 +48,26 @@
     <!-- HEADER -->
     <header
       id="header"
-      class="bg-green-900 text-white fixed w-full top-0 z-50 backdrop-blur-sm shadow-md transition-colors duration-300"
+      class="bg-green-900 text-white fixed w-full top-0 z-50 shadow-md transition-colors duration-300"
       role="banner"
     >
-      <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div
+        class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between"
+      >
         <!-- Logo / Brand -->
         <div class="flex items-center space-x-4">
           <img
             src="assets/images/logo.png"
             alt="JKGS Consulting Logo"
-            class="max-h-10 w-auto sm:max-h-12"
+            class="h-12 w-auto sm:h-14"
             loading="lazy"
           />
-          <a href="#hero" class="text-2xl sm:text-3xl font-bold">JKGS Consulting</a>
+          <!-- Brand text: hidden on xs, shown as block on sm and above -->
+          <span
+            class="hidden sm:block text-xl sm:text-3xl font-bold leading-tight"
+          >
+            JKGS Consulting
+          </span>
         </div>
         <!-- Menu Button (Mobile) -->
         <button
@@ -74,9 +96,13 @@
           class="hidden lg:flex space-x-6 text-lg font-medium"
           aria-label="Main navigation"
         >
-          <a href="#services" class="hover:text-yellow-400 transition">Services</a>
+          <a href="#services" class="hover:text-yellow-400 transition"
+            >Services</a
+          >
           <a href="#about" class="hover:text-yellow-400 transition">About</a>
-          <a href="#contact" class="hover:text-yellow-400 transition">Contact</a>
+          <a href="#contact" class="hover:text-yellow-400 transition"
+            >Contact</a
+          >
         </nav>
       </div>
       <!-- Mobile Dropdown Navigation -->
@@ -93,11 +119,14 @@
 
     <!-- HERO SECTION -->
     <section
-  id="hero"
-  class="relative min-h-screen pt-16 flex flex-col items-center justify-center text-center text-white bg-cover bg-center bg-fixed"
-
+      id="hero"
+      class="relative min-h-screen pt-16 flex flex-col items-center justify-center text-center text-white bg-cover bg-center bg-fixed"
+    >
       <!-- Gradient Overlay -->
-      <div class="absolute inset-0 bg-gradient-to-br from-green-900 via-green-800 to-transparent opacity-80"></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-green-900 via-green-800 to-transparent opacity-80"
+      ></div>
+
       <div class="relative z-10 max-w-3xl px-6 animate-fadeIn">
         <img
           src="assets/images/logo.png"
@@ -109,9 +138,12 @@
           Navigating Sustainable Growth
         </h1>
         <p class="text-lg sm:text-xl mt-4 text-gray-200">
-          Partner with our experts to enhance your business strategy, education, funding solutions, and product innovation.
+          Partner with our experts to enhance your business strategy, education,
+          funding solutions, and product innovation.
         </p>
-        <div class="py-6 py- flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
+        <div
+          class="py-6 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center"
+        >
           <a
             href="#services"
             data-offset="250"
@@ -130,40 +162,90 @@
     </section>
 
     <!-- SERVICES SECTION -->
-    <section id="services" class="py-16 bg-gray-50" data-aos="zoom-in" data-aos-duration="1000">
+    <section
+      id="services"
+      class="py-16 bg-gray-50"
+      data-aos="zoom-in"
+      data-aos-duration="1000"
+    >
       <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-center text-4xl font-semibold text-green-900 mb-12">Our Services</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" aria-label="Services offered by JKGS Consulting">
+        <h2 class="text-center text-4xl font-semibold text-green-900 mb-12">
+          Our Services
+        </h2>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+          aria-label="Services offered by JKGS Consulting"
+        >
           <!-- Service Card: Business Consulting -->
-          <div class="service-block group bg-white p-8 rounded-xl shadow-lg text-center transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-2xl border-t-4 border-yellow-400 hover:bg-gradient-to-r hover:from-green-50 hover:to-yellow-50" data-aos="zoom-in" data-aos-delay="100">
-            <img src="assets/icons/briefcase.svg" alt="Business Consulting Icon" class="mx-auto mb-4 h-12 w-12 transition-transform duration-300 group-hover:scale-110" />
-            <h3 class="text-2xl font-bold text-green-900">Business Consulting</h3>
+          <div
+            class="service-block group bg-white p-8 rounded-xl shadow-lg text-center transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-2xl border-t-4 border-yellow-400 hover:bg-gradient-to-r hover:from-green-50 hover:to-yellow-50"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <img
+              src="assets/icons/briefcase.svg"
+              alt="Business Consulting Icon"
+              class="mx-auto mb-4 h-12 w-12 transition-transform duration-300 group-hover:scale-110"
+            />
+            <h3 class="text-2xl font-bold text-green-900">
+              Business Consulting
+            </h3>
             <p class="text-gray-600 mt-4">
-              Optimize operations, refine strategic direction, and boost profitability.
+              Optimize operations, refine strategic direction, and boost
+              profitability.
             </p>
           </div>
           <!-- Service Card: Education -->
-          <div class="service-block group bg-white p-8 rounded-xl shadow-lg text-center transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-2xl border-t-4 border-yellow-400 hover:bg-gradient-to-r hover:from-green-50 hover:to-yellow-50" data-aos="zoom-in" data-aos-delay="200">
-            <img src="assets/icons/education.svg" alt="Education Icon" class="mx-auto mb-4 h-12 w-12 transition-transform duration-300 group-hover:scale-110" />
+          <div
+            class="service-block group bg-white p-8 rounded-xl shadow-lg text-center transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-2xl border-t-4 border-yellow-400 hover:bg-gradient-to-r hover:from-green-50 hover:to-yellow-50"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
+            <img
+              src="assets/icons/education.svg"
+              alt="Education Icon"
+              class="mx-auto mb-4 h-12 w-12 transition-transform duration-300 group-hover:scale-110"
+            />
             <h3 class="text-2xl font-bold text-green-900">Education</h3>
             <p class="text-gray-600 mt-4">
-              Empowering through culinary and business education—bridging passion with practical expertise.
+              Empowering through culinary and business education—bridging
+              passion with practical expertise.
             </p>
           </div>
           <!-- Service Card: Funding Solutions -->
-          <div class="service-block group bg-white p-8 rounded-xl shadow-lg text-center transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-2xl border-t-4 border-yellow-400 hover:bg-gradient-to-r hover:from-green-50 hover:to-yellow-50" data-aos="zoom-in" data-aos-delay="300">
-            <img src="assets/icons/dollar-sign.svg" alt="Funding Solutions Icon" class="mx-auto mb-4 h-12 w-12 transition-transform duration-300 group-hover:scale-110" />
+          <div
+            class="service-block group bg-white p-8 rounded-xl shadow-lg text-center transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-2xl border-t-4 border-yellow-400 hover:bg-gradient-to-r hover:from-green-50 hover:to-yellow-50"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          >
+            <img
+              src="assets/icons/dollar-sign.svg"
+              alt="Funding Solutions Icon"
+              class="mx-auto mb-4 h-12 w-12 transition-transform duration-300 group-hover:scale-110"
+            />
             <h3 class="text-2xl font-bold text-green-900">Funding Solutions</h3>
             <p class="text-gray-600 mt-4">
-              Connect with grants, loans, and strategic partnerships to fuel expansion.
+              Connect with grants, loans, and strategic partnerships to fuel
+              expansion.
             </p>
           </div>
           <!-- Service Card: Product Innovation -->
-          <div class="service-block group bg-white p-8 rounded-xl shadow-lg text-center transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-2xl border-t-4 border-yellow-400 hover:bg-gradient-to-r hover:from-green-50 hover:to-yellow-50" data-aos="zoom-in" data-aos-delay="400">
-            <img src="assets/icons/lightbulb.svg" alt="Product Innovation Icon" class="mx-auto mb-4 h-12 w-12 transition-transform duration-300 group-hover:scale-110" />
-            <h3 class="text-2xl font-bold text-green-900">Product Innovation</h3>
+          <div
+            class="service-block group bg-white p-8 rounded-xl shadow-lg text-center transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-2xl border-t-4 border-yellow-400 hover:bg-gradient-to-r hover:from-green-50 hover:to-yellow-50"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          >
+            <img
+              src="assets/icons/lightbulb.svg"
+              alt="Product Innovation Icon"
+              class="mx-auto mb-4 h-12 w-12 transition-transform duration-300 group-hover:scale-110"
+            />
+            <h3 class="text-2xl font-bold text-green-900">
+              Product Innovation
+            </h3>
             <p class="text-gray-600 mt-4">
-              Integrate fermentation, flavor development, and market analysis for breakthrough products.
+              Integrate fermentation, flavor development, and market analysis
+              for breakthrough products.
             </p>
           </div>
         </div>
@@ -171,56 +253,120 @@
     </section>
 
     <!-- ABOUT SECTION -->
-    <section id="about" class="py-16 bg-white" data-aos="fade-up" data-aos-duration="1000">
+    <section
+      id="about"
+      class="py-16 bg-white"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
       <div class="max-w-5xl mx-auto px-6 text-center">
         <h2 class="text-4xl font-semibold text-green-900 mb-8">About Us</h2>
         <p class="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
-          At <span class="font-bold text-green-900">JKGS Consulting</span>, we bring decades of combined experience in business strategy, culinary arts, and product innovation. Our mission is to empower organizations—ranging from food startups to established enterprises—to achieve <strong>sustainable growth</strong> by leveraging our deep expertise in <strong>business consulting</strong>, <strong>education</strong>, <strong>funding solutions</strong>, and <strong>product innovation</strong>.
+          At <span class="font-bold text-green-900">JKGS Consulting</span>, we
+          bring decades of combined experience in business strategy, culinary
+          arts, and product innovation. Our mission is to empower
+          organizations—ranging from food startups to established enterprises—to
+          achieve <strong>sustainable growth</strong> by leveraging our deep
+          expertise in <strong>business consulting</strong>,
+          <strong>education</strong>, <strong>funding solutions</strong>, and
+          <strong>product innovation</strong>.
         </p>
         <p class="mt-6 text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
-          Whether you're looking to streamline operations, develop groundbreaking food products, or secure grants for expansion, our team is dedicated to guiding you through every phase of the journey. We pride ourselves on <strong>collaboration</strong>, <strong>transparency</strong>, and <strong>tailored solutions</strong> that address your unique challenges and goals.
+          Whether you're looking to streamline operations, develop
+          groundbreaking food products, or secure grants for expansion, our team
+          is dedicated to guiding you through every phase of the journey. We
+          pride ourselves on <strong>collaboration</strong>,
+          <strong>transparency</strong>, and
+          <strong>tailored solutions</strong> that address your unique
+          challenges and goals.
         </p>
       </div>
     </section>
 
     <!-- CONTACT SECTION -->
-    <section id="contact" class="relative py-16 bg-cover bg-center text-white" style="background-image: url('assets/images/food-growth.jpeg')" data-aos="fade-up" data-aos-duration="1000">
+    <section
+      id="contact"
+      class="relative py-16 bg-cover bg-center text-white"
+      style="background-image: url('assets/images/food-growth.jpeg')"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
       <div class="absolute inset-0 bg-black opacity-70"></div>
       <div class="relative z-10 max-w-4xl mx-auto px-6">
-        <h2 class="text-center text-4xl font-semibold text-yellow-400">Contact Us</h2>
+        <h2 class="text-center text-4xl font-semibold text-yellow-400">
+          Contact Us
+        </h2>
         <p class="text-center text-lg mt-4 text-gray-200 max-w-2xl mx-auto">
-          Have a question or need guidance? Reach out and let's discuss how we can help propel your business forward.
+          Have a question or need guidance? Reach out and let's discuss how we
+          can help propel your business forward.
         </p>
         <!-- Contact Form -->
-        <form id="contact-form" name="contact" method="POST" data-netlify="true" class="mt-8 max-w-2xl mx-auto space-y-4">
+        <form
+          id="contact-form"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          class="mt-8 max-w-2xl mx-auto space-y-4"
+        >
           <input type="hidden" name="form-name" value="contact" />
           <div>
             <label for="name" class="sr-only">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" class="w-full px-4 py-2 rounded-lg bg-white border border-gray-300 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400" required />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              class="w-full px-4 py-2 rounded-lg bg-white border border-gray-300 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              required
+            />
           </div>
           <div>
             <label for="email" class="sr-only">Email</label>
-            <input type="email" id="email" name="email" placeholder="Your Email" class="w-full px-4 py-2 rounded-lg bg-white border border-gray-300 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400" required />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your Email"
+              class="w-full px-4 py-2 rounded-lg bg-white border border-gray-300 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              required
+            />
           </div>
           <div>
             <label for="message" class="sr-only">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Your Message" class="w-full px-4 py-2 rounded-lg bg-white border border-gray-300 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400" required></textarea>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Your Message"
+              class="w-full px-4 py-2 rounded-lg bg-white border border-gray-300 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              required
+            ></textarea>
           </div>
-          <button type="submit" class="bg-yellow-400 text-black font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-yellow-500 transition">
+          <button
+            type="submit"
+            class="bg-yellow-400 text-black font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-yellow-500 transition"
+          >
             Send Message
           </button>
         </form>
         <!-- Success Notification -->
-        <div id="form-notification" class="hidden p-4 mt-4 text-green-700 bg-green-100 border border-green-300 rounded">
+        <div
+          id="form-notification"
+          class="hidden p-4 mt-4 text-green-700 bg-green-100 border border-green-300 rounded"
+        >
           Your message has been successfully sent!
         </div>
         <!-- Direct Contact Info -->
         <div class="mt-8 text-center text-gray-200">
           <p class="text-lg">
-            Email: <a href="mailto:info@jkgsconsulting.com" class="underline">info@jkgsconsulting.com</a>
+            Email:
+            <a href="mailto:info@jkgsconsulting.com" class="underline"
+              >info@jkgsconsulting.com</a
+            >
           </p>
           <p class="text-lg">
-            Phone: <a href="tel:+16478282107" class="underline">(647) 828-2107</a>
+            Phone:
+            <a href="tel:+16478282107" class="underline">(647) 828-2107</a>
           </p>
           <p class="text-lg">Location: Ottawa, Ontario</p>
         </div>
@@ -228,17 +374,40 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="no-aos bg-green-900 text-white text-center py-6" role="contentinfo">
+    <footer
+      class="no-aos bg-green-900 text-white text-center py-6"
+      role="contentinfo"
+    >
       <p>&copy; 2025 JKGS Consulting. All rights reserved.</p>
       <div class="mt-4 flex justify-center space-x-4">
-        <a href="#" aria-label="Facebook" class="hover:text-yellow-400 transition">
-          <svg class="w-6 h-6 fill-current inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M22.675 0h-21.35C.6 0 0 .6 0 1.325v21.351C0 23.4.6 24 1.325 24H12.82v-9.294H9.692V11.41h3.128V8.72c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.464.098 2.794.143v3.24l-1.916.001c-1.503 0-1.796.715-1.796 1.763v2.316h3.59l-.467 3.296h-3.123V24h6.116C23.4 24 24 23.4 24 22.675V1.325C24 .6 23.4 0 22.675 0z"/>
+        <a
+          href="#"
+          aria-label="Facebook"
+          class="hover:text-yellow-400 transition"
+        >
+          <svg
+            class="w-6 h-6 fill-current inline-block"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M22.675 0h-21.35C.6 0 0 .6 0 1.325v21.351C0 23.4.6 24 1.325 24H12.82v-9.294H9.692V11.41h3.128V8.72c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.464.098 2.794.143v3.24l-1.916.001c-1.503 0-1.796.715-1.796 1.763v2.316h3.59l-.467 3.296h-3.123V24h6.116C23.4 24 24 23.4 24 22.675V1.325C24 .6 23.4 0 22.675 0z"
+            />
           </svg>
         </a>
-        <a href="#" aria-label="LinkedIn" class="hover:text-yellow-400 transition">
-          <svg class="w-6 h-6 fill-current inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M19 0h-14c-2.757 0-5 2.243-5 5v14c0 2.756 2.243 5 5 5h14c2.757 0 5-2.244 5-5v-14c0-2.757-2.243-5-5-5zm-11 19h-2v-9h2v9zm-1-10.271c-.633 0-1.146-.514-1.146-1.146 0-.631.513-1.145 1.146-1.145s1.146.514 1.146 1.145c0 .632-.513 1.146-1.146 1.146zm12 10.271h-2v-4.919c0-1.174-.025-2.685-1.636-2.685-1.636 0-1.887 1.278-1.887 2.598v5.006h-2v-9h1.922v1.234h.027c.268-.507.92-1.04 1.893-1.04 2.025 0 2.397 1.333 2.397 3.068v5.738z"/>
+        <a
+          href="#"
+          aria-label="LinkedIn"
+          class="hover:text-yellow-400 transition"
+        >
+          <svg
+            class="w-6 h-6 fill-current inline-block"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M19 0h-14c-2.757 0-5 2.243-5 5v14c0 2.756 2.243 5 5 5h14c2.757 0 5-2.244 5-5v-14c0-2.757-2.243-5-5-5zm-11 19h-2v-9h2v9zm-1-10.271c-.633 0-1.146-.514-1.146-1.146 0-.631.513-1.145 1.146-1.145s1.146.514 1.146 1.145c0 .632-.513 1.146-1.146 1.146zm12 10.271h-2v-4.919c0-1.174-.025-2.685-1.636-2.685-1.636 0-1.887 1.278-1.887 2.598v5.006h-2v-9h1.922v1.234h.027c.268-.507.92-1.04 1.893-1.04 2.025 0 2.397 1.333 2.397 3.068v5.738z"
+            />
           </svg>
         </a>
       </div>

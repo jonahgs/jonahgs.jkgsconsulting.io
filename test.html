@@ -1,34 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Animated Gradient Example</title>
-    <!-- Include Tailwind via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      /* Define keyframes for the gradient animation */
-      @keyframes gradientShift {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
-      }
-      /* Custom class to apply the animation */
-      .animate-gradient {
-        animation: gradientShift 5s ease infinite;
-        background-size: 200% 200%;
-      }
-    </style>
+    <title>Tailwind JIT Test</title>
+    <!-- Link to your compiled CSS -->
+    <link rel="stylesheet" href="dist/styles.css" />
   </head>
-  <body class="min-h-screen bg-gradient-to-r from-indigo-500 to-purple-500 animate-gradient">
-    <div class="container mx-auto text-center py-20">
-      <h1 class="text-5xl font-bold text-white">Hello, Animated Gradient!</h1>
-    </div>
+  <body>
+    <!-- This element should be hidden on viewports below 640px, and visible (with a red background) on 640px and up -->
+    <div class="hidden sm:block bg-red-500 p-4">Hello, world!</div>
   </body>
 </html>
