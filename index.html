@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Google Analytics -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,7 +26,37 @@
     <meta property="og:image" content="assets/images/og-image.jpeg" />
     <meta property="og:url" content="https://www.jkgsconsulting.com" />
     <meta property="og:type" content="website" />
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R0ZM6XL6X2"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-R0ZM6XL6X2'); // Your GA4 ID
+    </script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          document.querySelectorAll("form").forEach(form => {
+            form.addEventListener("submit", function (event) {
+              if (event.target.action.includes("formspree.io")) {
+                gtag("event", "form_submission", {
+                  event_category: "Form",
+                  event_label: "Contact Form",
+                });
+              }
+            });
+          });
+        });
+    
+        document.addEventListener("DOMContentLoaded", function () {
+          if (window.location.pathname === "/qr-2024") {
+            gtag("event", "qr_code_scan", {
+              event_category: "QR Code",
+              event_label: "Business Card",
+            });
+          }
+        });
+      </script>
     <!-- Favicon -->
     <link rel="icon" href="assets/images/logo.png" type="image/png" />
 
@@ -40,11 +71,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
     />
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    
     <!-- Compiled Tailwind CSS -->
     <link rel="stylesheet" href="dist/styles.css" />
   </head>
-  <body class="bg-gray-100 text-gray-900 font-sans">
+  
     <!-- HEADER -->
     <header
       id="header"
