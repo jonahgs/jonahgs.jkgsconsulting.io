@@ -1,389 +1,534 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Google Analytics -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JKGS Consulting - Navigating Sustainable Growth</title>
-    <link rel="canonical" href="https://www.jkgsconsulting.com/" />
-    <!-- Primary SEO Meta Tags -->
+    <title>
+      JKGS Consulting | Strategic Advisory for Owner-Led Businesses Building
+      Smarter Operations
+    </title>
+    <link rel="canonical" href="https://jkgsconsulting.com/" />
     <meta
       name="description"
-      content="JKGS Consulting provides expert guidance in business consulting, culinary education, funding solutions, and product innovation to help you navigate sustainable growth."
+      content="JKGS Consulting helps owner-led businesses improve workflows, strengthen operations, and adopt AI tools in practical, commercially useful ways."
     />
-    <meta
-      name="keywords"
-      content="business consulting, culinary education, funding solutions, product innovation, JKGS Consulting, Ottawa, Ontario"
-    />
-    <meta name="theme-color" content="#064e3b" />
-
-    <!-- Open Graph Tags (Social Media) -->
+    <meta name="theme-color" content="#17312b" />
     <meta property="og:title" content="JKGS Consulting" />
     <meta
       property="og:description"
-      content="Expert consulting to drive your business forward with strategic insights and innovation."
+      content="Strategic advisory for owner-led businesses building smarter operations."
     />
-    <meta property="og:image" content="assets/images/og-image.jpeg" />
-    <meta property="og:url" content="https://www.jkgsconsulting.com" />
+    <meta
+      property="og:image"
+      content="https://jkgsconsulting.com/assets/images/logo.png"
+    />
+    <meta property="og:url" content="https://jkgsconsulting.com/" />
     <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="JKGS Consulting" />
+    <meta
+      name="twitter:description"
+      content="Strategic advisory for owner-led businesses building smarter operations."
+    />
+    <meta
+      name="twitter:image"
+      content="https://jkgsconsulting.com/assets/images/logo.png"
+    />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-R0ZM6XL6X2"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-R0ZM6XL6X2'); // Your GA4 ID
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-R0ZM6XL6X2");
     </script>
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          document.querySelectorAll("form").forEach(form => {
-            form.addEventListener("submit", function (event) {
-              if (event.target.action.includes("formspree.io")) {
-                gtag("event", "form_submission", {
-                  event_category: "Form",
-                  event_label: "Contact Form",
-                });
-              }
-            });
-          });
-        });
-    
-        document.addEventListener("DOMContentLoaded", function () {
-          if (window.location.pathname === "/qr-2024") {
-            gtag("event", "qr_code_scan", {
-              event_category: "QR Code",
-              event_label: "Business Card",
-            });
-          }
-        });
-      </script>
-    <!-- Favicon -->
     <link rel="icon" href="assets/images/logo.png" type="image/png" />
-
-    <!-- Google Fonts (Custom Font: Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap"
       rel="stylesheet"
     />
-
-    <!-- AOS CSS for animations -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
     />
-    
-    <!-- Compiled Tailwind CSS -->
     <link rel="stylesheet" href="dist/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "JKGS Consulting",
+        "url": "https://jkgsconsulting.com/",
+        "image": "https://jkgsconsulting.com/assets/images/logo.png",
+        "description": "JKGS Consulting helps owner-led businesses improve workflows, strengthen operations, and adopt AI tools in practical, commercially useful ways.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Ottawa",
+          "addressRegion": "Ontario",
+          "addressCountry": "CA"
+        },
+        "areaServed": ["Ottawa", "Ontario", "Canada"],
+        "founder": {
+          "@type": "Person",
+          "name": "Jonah Greenbaum-Shinder"
+        },
+        "email": "info@jkgsconsulting.com",
+        "telephone": "+1-647-828-2107",
+        "serviceType": [
+          "Operations consulting",
+          "Workflow consulting",
+          "Practical AI consulting",
+          "Strategic advisory"
+        ]
+      }
+    </script>
   </head>
-  
-    <!-- HEADER -->
+  <body class="bg-stone-50 text-stone-900">
     <header
       id="header"
-      class="bg-green-900 text-white fixed w-full top-0 z-50 shadow-md transition-colors duration-300"
+      class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[rgba(18,25,24,0.78)] backdrop-blur"
       role="banner"
     >
-    <div
-    class="max-w-7xl mx-auto px-3 py-3 flex items-center justify-between relative"
-  >
-    <!-- Logo / Brand - positioned in corner -->
-    <div class="absolute left-3 top-1/2 -translate-y-1/2">
-      <img
-        src="assets/images/logo.png"
-        alt="JKGS Consulting Logo"
-        class="h-12 w-auto sm:h-14"
-        loading="lazy"
-      />
-    </div>
-  
-    <!-- Centered Brand Text -->
-    <div class="w-full text-center">
-      <span class="text-lg sm:text-3xl font-bold leading-tight">
-        JKGS Consulting
-      </span>
-    </div>
-  </div>
-      <!-- Mobile Dropdown Navigation -->
+      <div
+        class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8"
+      >
+        <a href="index.html" class="flex items-center gap-3 text-white">
+          <img
+            src="assets/images/logo.png"
+            alt="JKGS Consulting logo"
+            class="h-11 w-auto"
+          />
+          <span class="text-sm font-semibold uppercase tracking-[0.22em]"
+            >JKGS Consulting</span
+          >
+        </a>
+
+        <nav class="hidden items-center gap-8 text-sm text-stone-200 lg:flex">
+          <a href="services.html" class="transition hover:text-white">Services</a>
+          <a href="ai-systems.html" class="transition hover:text-white">AI Systems</a>
+          <a href="about.html" class="transition hover:text-white">About</a>
+          <a href="contact.html" class="transition hover:text-white">Contact</a>
+        </nav>
+
+        <div class="hidden lg:block">
+          <a
+            href="contact.html"
+            class="inline-flex items-center rounded-full border border-white/20 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-white hover:bg-white hover:text-stone-900"
+          >
+            Book a Discovery Call
+          </a>
+        </div>
+
+        <button
+          id="menuBtn"
+          class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-white transition hover:bg-white/10 lg:hidden"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <span class="sr-only">Menu</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+      </div>
+
       <nav
         id="mobileMenu"
-        class="bg-green-900 text-white flex-col space-y-2 text-center p-4 lg:hidden hidden transition-all duration-200"
+        class="hidden border-t border-white/10 bg-[#121918] px-6 py-5 lg:hidden"
         aria-label="Mobile navigation"
       >
-        <a href="#services" class="block py-2 hover:bg-green-800">Services</a>
-        <a href="#about" class="block py-2 hover:bg-green-800">About</a>
-        <a href="#contact" class="block py-2 hover:bg-green-800">Contact</a>
+        <div class="flex flex-col gap-4 text-base text-stone-200">
+          <a href="services.html" class="transition hover:text-white">Services</a>
+          <a href="ai-systems.html" class="transition hover:text-white">AI Systems</a>
+          <a href="about.html" class="transition hover:text-white">About</a>
+          <a href="contact.html" class="transition hover:text-white">Contact</a>
+          <a
+            href="contact.html"
+            class="mt-2 inline-flex w-full items-center justify-center rounded-full bg-[#d3b06b] px-5 py-3 text-sm font-semibold text-stone-950 transition hover:bg-[#e4c789]"
+          >
+            Book a Discovery Call
+          </a>
+        </div>
       </nav>
     </header>
 
-    <!-- HERO SECTION -->
-    <section
-      id="hero"
-      class="relative min-h-screen pt-16 flex flex-col items-center justify-center text-center text-white bg-cover bg-center bg-fixed"
-    >
-      <!-- Gradient Overlay -->
-      <div
-        class="absolute inset-0 bg-gradient-to-br from-green-900 via-green-800 to-transparent opacity-80"
-      ></div>
-
-      <div class="relative z-10 max-w-3xl px-6 animate-fadeIn">
-        <img
-          src="assets/images/logo.png"
-          alt="JKGS Consulting Logo"
-          class="w-32 mx-auto mb-6"
-          loading="lazy"
-        />
-        <h1 class="text-4xl sm:text-5xl font-extrabold text-yellow-400">
-          Navigating Sustainable Growth
-        </h1>
-        <p class="text-lg sm:text-xl mt-4 text-gray-200">
-          Partner with our experts to enhance your business strategy, education,
-          funding solutions, and product innovation.
-        </p>
+    <main>
+      <section
+        id="hero"
+        class="motif-anchor motif-anchor--hero relative isolate overflow-hidden px-6 pb-20 pt-36 text-white lg:px-8 lg:pb-24 lg:pt-44"
+      >
+        <div class="hero-grid absolute inset-0 -z-20"></div>
+        <div class="absolute inset-0 -z-10 bg-[rgba(12,19,18,0.62)]"></div>
         <div
-          class="py-6 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center"
+          class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,420px)] lg:items-end"
         >
-          <a
-            href="#services"
-            data-offset="250"
-            class="hero-service-button bg-yellow-400 text-black font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-yellow-500 transition"
-          >
-            Our Services
-          </a>
-          <a
-            href="#contact"
-            class="border border-white text-white font-semibold py-3 px-6 rounded-lg hover:bg-white hover:text-black transition"
-          >
-            Get in Touch
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES SECTION -->
-    <section
-      id="services"
-      class="py-16 bg-gray-50"
-      data-aos="zoom-in"
-      data-aos-duration="1000"
-    >
-      <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-center text-4xl font-semibold text-green-900 mb-12">
-          Our Services
-        </h2>
-        <div
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
-          aria-label="Services offered by JKGS Consulting"
-        >
-          <!-- Service Card: Business Consulting -->
-          <div
-            class="service-block group bg-white p-8 rounded-xl shadow-lg text-center transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-2xl border-t-4 border-yellow-400 hover:bg-gradient-to-r hover:from-green-50 hover:to-yellow-50"
-            data-aos="zoom-in"
-            data-aos-delay="100"
-          >
-            <img
-              src="assets/icons/briefcase.svg"
-              alt="Business Consulting Icon"
-              class="mx-auto mb-4 h-12 w-12 transition-transform duration-300 group-hover:scale-110"
-            />
-            <h3 class="text-2xl font-bold text-green-900">
-              Business Consulting
-            </h3>
-            <p class="text-gray-600 mt-4">
-              Optimize operations, refine strategic direction, and boost
-              profitability.
+          <div class="max-w-3xl" data-aos="fade-up" data-aos-duration="900">
+            <p class="eyebrow-pill">
+              Strategic advisory for owner-led businesses building smarter operations
             </p>
-          </div>
-          <!-- Service Card: Education -->
-          <div
-            class="service-block group bg-white p-8 rounded-xl shadow-lg text-center transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-2xl border-t-4 border-yellow-400 hover:bg-gradient-to-r hover:from-green-50 hover:to-yellow-50"
-            data-aos="zoom-in"
-            data-aos-delay="200"
-          >
-            <img
-              src="assets/icons/education.svg"
-              alt="Education Icon"
-              class="mx-auto mb-4 h-12 w-12 transition-transform duration-300 group-hover:scale-110"
-            />
-            <h3 class="text-2xl font-bold text-green-900">Education</h3>
-            <p class="text-gray-600 mt-4">
-              Empowering through culinary and business education—bridging
-              passion with practical expertise.
-            </p>
-          </div>
-          <!-- Service Card: Funding Solutions -->
-          <div
-            class="service-block group bg-white p-8 rounded-xl shadow-lg text-center transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-2xl border-t-4 border-yellow-400 hover:bg-gradient-to-r hover:from-green-50 hover:to-yellow-50"
-            data-aos="zoom-in"
-            data-aos-delay="300"
-          >
-            <img
-              src="assets/icons/dollar-sign.svg"
-              alt="Funding Solutions Icon"
-              class="mx-auto mb-4 h-12 w-12 transition-transform duration-300 group-hover:scale-110"
-            />
-            <h3 class="text-2xl font-bold text-green-900">Funding Solutions</h3>
-            <p class="text-gray-600 mt-4">
-              Connect with grants, loans, and strategic partnerships to fuel
-              expansion.
-            </p>
-          </div>
-          <!-- Service Card: Product Innovation -->
-          <div
-            class="service-block group bg-white p-8 rounded-xl shadow-lg text-center transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-2xl border-t-4 border-yellow-400 hover:bg-gradient-to-r hover:from-green-50 hover:to-yellow-50"
-            data-aos="zoom-in"
-            data-aos-delay="400"
-          >
-            <img
-              src="assets/icons/lightbulb.svg"
-              alt="Product Innovation Icon"
-              class="mx-auto mb-4 h-12 w-12 transition-transform duration-300 group-hover:scale-110"
-            />
-            <h3 class="text-2xl font-bold text-green-900">
-              Product Innovation
-            </h3>
-            <p class="text-gray-600 mt-4">
-              Integrate fermentation, flavor development, and market analysis
-              for breakthrough products.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section
-      id="about"
-      class="py-16 bg-white"
-      data-aos="fade-up"
-      data-aos-duration="1000"
-    >
-      <div class="max-w-5xl mx-auto px-6 text-center">
-        <h2 class="text-4xl font-semibold text-green-900 mb-8">About Us</h2>
-        <p class="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
-          At <span class="font-bold text-green-900">JKGS Consulting</span>, we
-          bring decades of combined experience in business strategy, culinary
-          arts, and product innovation. Our mission is to empower
-          organizations—ranging from food startups to established enterprises—to
-          achieve <strong>sustainable growth</strong> by leveraging our deep
-          expertise in <strong>business consulting</strong>,
-          <strong>education</strong>, <strong>funding solutions</strong>, and
-          <strong>product innovation</strong>.
-        </p>
-        <p class="mt-6 text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
-          Whether you're looking to streamline operations, develop
-          groundbreaking food products, or secure grants for expansion, our team
-          is dedicated to guiding you through every phase of the journey. We
-          pride ourselves on <strong>collaboration</strong>,
-          <strong>transparency</strong>, and
-          <strong>tailored solutions</strong> that address your unique
-          challenges and goals.
-        </p>
-      </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section
-      id="contact"
-      class="relative py-16 bg-cover bg-center text-white"
-      style="background-image: url('assets/images/food-growth.jpeg')"
-      data-aos="fade-up"
-      data-aos-duration="1000"
-    >
-      <div class="absolute inset-0 bg-black opacity-70"></div>
-      <div class="relative z-10 max-w-4xl mx-auto px-6">
-        <h2 class="text-center text-4xl font-semibold text-yellow-400">
-          Contact Us
-        </h2>
-        <p class="text-center text-lg mt-4 text-gray-200 max-w-2xl mx-auto">
-          Have a question or need guidance? Reach out and let's discuss how we
-          can help propel your business forward.
-        </p>
-        <!-- Contact Form -->
-        <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
-    <script>
-      window.formbutton = window.formbutton || function () {(formbutton.q = formbutton.q || []).push(arguments)};
-      formbutton("create", {
-        action: "https://formspree.io/f/mwpvgppl",
-        title: "How can we help?",
-        fields: [
-          {
-            type: "email",
-            label: "Email:",
-            name: "email",
-            required: true,
-            placeholder: "your@email.com"
-          },
-          {
-            type: "textarea",
-            label: "Message:",
-            name: "message",
-            placeholder: "What's on your mind?",
-          },
-          { type: "submit" }
-        ],
-        styles: {
-          title: { backgroundColor: "#064e3b", color: "white" },
-          button: { backgroundColor: "#064e3b", color: "white" }
-        }
-      });
-    </script>
-
-        <!-- Success Notification -->
-        <div
-          id="form-notification"
-          class="hidden p-4 mt-4 text-green-700 bg-green-100 border border-green-300 rounded"
-        >
-          Your message has been successfully sent!
-        </div>
-        <!-- Direct Contact Info -->
-        <div class="mt-8 text-center text-gray-200">
-          <p class="text-lg">
-            Email:
-            <a href="mailto:info@jkgsconsulting.com" class="underline"
-              >info@jkgsconsulting.com</a
+            <h1
+              class="max-w-4xl font-serif text-5xl leading-tight text-[#f5f0e7] sm:text-6xl"
             >
-          </p>
-          <p class="text-lg">
-            Phone:
-            <a href="tel:+16478282107" class="underline">(647) 828-2107</a>
-          </p>
-          <p class="text-lg">Location: Ottawa, Ontario</p>
-        </div>
-      </div>
-    </section>
+              Better systems, clearer workflows, and practical AI adoption for
+              growing SMEs.
+            </h1>
+            <p class="mt-6 max-w-2xl text-lg leading-8 text-stone-200">
+              JKGS Consulting helps businesses reduce friction, improve
+              operations, and build better ways for work to move.
+            </p>
+            <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a href="contact.html" class="button-primary">
+                Book a Discovery Call
+              </a>
+              <a href="services.html" class="button-secondary-on-dark">
+                Explore Services
+              </a>
+            </div>
+            <div class="mt-10 grid gap-4 text-sm text-stone-300 sm:grid-cols-3">
+              <div>
+                <span class="info-label">Primary clients</span>
+                SMEs and owner-led businesses
+              </div>
+              <div>
+                <span class="info-label">Working style</span>
+                Direct, practical, and implementation-minded
+              </div>
+              <div>
+                <span class="info-label">Based in</span>
+                Ottawa, serving Ontario and beyond
+              </div>
+            </div>
+          </div>
 
-    <footer class="bg-green-900 text-white text-center py-6" role="contentinfo">
-      <p class="mb-4">&copy; 2025 JKGS Consulting. All rights reserved.</p>
-      <div class="mt-4 flex justify-center space-x-4">
-        <a
-          href="https://www.instagram.com/jkgsconsulting"
-          target="_blank"
-          rel="noopener"
-          aria-label="Instagram"
-          class="hover:text-yellow-400 transition"
-        >
-          <!-- Simpler Instagram icon -->
-          <svg
-            class="w-6 h-6"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
+          <aside
+            class="rounded-[2rem] border border-white/12 bg-white/8 p-7 backdrop-blur-sm"
+            data-aos="fade-left"
+            data-aos-duration="900"
           >
-            <path
-              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
-            />
-          </svg>
-        </a>
-        <!-- You can add more social icons here -->
+            <p class="info-label text-stone-300">Where the work starts</p>
+            <h2 class="mt-4 text-2xl font-semibold text-[#f5f0e7]">
+              When the business feels harder to run than it should.
+            </h2>
+            <ul class="mt-6 space-y-3 text-sm leading-7 text-stone-200">
+              <li>Too much work depends on memory or the owner</li>
+              <li>Reporting, admin, or documentation takes too long</li>
+              <li>AI tools are being tested without a clear use case</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="surface-paper border-y border-stone-200">
+        <div
+          class="mx-auto grid max-w-7xl gap-6 px-6 py-6 text-sm text-stone-600 lg:grid-cols-4 lg:px-8"
+        >
+          <p class="font-semibold text-stone-900">Best fit engagements</p>
+          <p>Workflow audits and systems diagnostics</p>
+          <p>Practical AI pilots for lean teams</p>
+          <p>Strategic advisory for operators and founders</p>
+        </div>
+      </section>
+
+      <section class="surface-paper px-6 py-20 lg:px-8">
+        <div class="mx-auto max-w-7xl">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="section-label">Services</p>
+            <h2 class="section-title">
+              Advisory work focused on how the business actually runs.
+            </h2>
+          </div>
+
+          <div class="mt-12 grid gap-8 lg:grid-cols-3">
+            <article class="service-column" data-aos="fade-up" data-aos-delay="100">
+              <img
+                src="assets/icons/briefcase.svg"
+                alt="Operations and workflow consulting"
+                class="h-12 w-12"
+              />
+              <h3>Operations and Workflow Consulting</h3>
+              <p>
+                Clarify intake, handoffs, ownership, and follow-through so the
+                business runs with less drag.
+              </p>
+              <ul>
+                <li>Workflow audits</li>
+                <li>Process redesign</li>
+                <li>SOP creation and knowledge capture</li>
+              </ul>
+            </article>
+
+            <article class="service-column" data-aos="fade-up" data-aos-delay="200">
+              <img
+                src="assets/icons/lightbulb.svg"
+                alt="AI systems and adoption"
+                class="h-12 w-12"
+              />
+              <h3>AI Systems and Adoption</h3>
+              <p>
+                Use AI where it genuinely helps, especially around intake,
+                documentation, communication, and follow-through.
+              </p>
+              <ul>
+                <li>Practical AI use case design</li>
+                <li>Tool selection and workflow setup</li>
+                <li>Team enablement and usage guidance</li>
+              </ul>
+            </article>
+
+            <article class="service-column" data-aos="fade-up" data-aos-delay="300">
+              <img
+                src="assets/icons/dollar-sign.svg"
+                alt="Strategic advisory"
+                class="h-12 w-12"
+              />
+              <h3>Strategic Advisory</h3>
+              <p>
+                Support for founders and operators who need to see what matters
+                now and decide what carries forward.
+              </p>
+              <ul>
+                <li>Decision support and prioritization</li>
+                <li>Operating structure and systems guidance</li>
+                <li>Selective funding support where relevant</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="mt-10">
+            <a href="services.html" class="text-link">View all services and packages</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-[#f1ede4] px-6 py-20 lg:px-8">
+        <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.95fr_1.05fr]">
+          <div data-aos="fade-right">
+            <p class="section-label">Approach</p>
+            <h2 class="section-title">
+              Start with the friction. Then clarify where it lands, what
+              matters now, and what carries forward.
+            </h2>
+          </div>
+
+          <div class="grid gap-5" data-aos="fade-left">
+            <div class="approach-step">
+              <span>01</span>
+              <div>
+                <h3>Assess how work actually moves</h3>
+                <p>
+                  Identify what is showing up and where the drag is landing.
+                </p>
+              </div>
+            </div>
+            <div class="approach-step">
+              <span>02</span>
+              <div>
+                <h3>Clarify what matters now</h3>
+                <p>
+                  Make ownership, priorities, and the next move easier to see.
+                </p>
+              </div>
+            </div>
+            <div class="approach-step">
+              <span>03</span>
+              <div>
+                <h3>Build what carries forward</h3>
+                <p>
+                  Put in place workflows, documentation, review loops, and AI
+                  supports where useful.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="motif-anchor motif-anchor--proof px-6 py-20 lg:px-8">
+        <div class="mx-auto max-w-7xl">
+          <div class="max-w-3xl" data-aos="fade-up">
+            <p class="section-label">Example of the work</p>
+            <h2 class="section-title">
+              How business problems move from friction to follow-through.
+            </h2>
+            <p class="section-copy">The operating lens behind the work.</p>
+          </div>
+
+          <div class="mt-12 max-w-5xl" data-aos="fade-up" data-aos-delay="100">
+            <div class="artifact-panel">
+              <div class="artifact-header">
+                <div>
+                  <p class="proof-label">What this clarifies</p>
+                  <h3>How the issue moves</h3>
+                </div>
+                <span class="artifact-badge">From friction to follow-through</span>
+              </div>
+              <div class="workflow-map">
+                <div class="workflow-flow">
+                  <div class="workflow-node">
+                    <span class="workflow-node__kicker">01</span>
+                    <h4>What is showing up</h4>
+                    <p>Requests, bottlenecks, missed handoffs</p>
+                  </div>
+                  <div class="workflow-node">
+                    <span class="workflow-node__kicker">02</span>
+                    <h4>Where it lands</h4>
+                    <p>Who it affects and where work stalls</p>
+                  </div>
+                  <div class="workflow-node workflow-node--highlight">
+                    <span class="workflow-node__kicker">03</span>
+                    <h4>What matters now</h4>
+                    <p>Priorities, decisions, ownership</p>
+                  </div>
+                  <div class="workflow-node">
+                    <span class="workflow-node__kicker">04</span>
+                    <h4>What carries forward</h4>
+                    <p>Workflows, documentation, stronger follow-through</p>
+                  </div>
+                </div>
+                <div class="workflow-summary">
+                  <div>
+                    <span>Where it breaks</span>
+                    <p>The issue stays blurry and follow-through depends too much on memory.</p>
+                  </div>
+                  <div>
+                    <span>What changes</span>
+                    <p>The problem becomes clearer and work moves with more direction and less drag.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-10">
+            <a href="services.html" class="text-link">See how engagements start</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="outcomes-strip">
+        <div class="outcomes-strip-inner">
+          <p class="section-label">This often produces</p>
+          <div class="outcomes-list">
+            <span>Clearer reporting and better decision support</span>
+            <span>Better understanding of where AI fits in day-to-day work</span>
+            <span>Less repeated admin and documentation work</span>
+            <span>Cleaner workflows and more consistent handoffs</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="bg-[#121918] px-6 py-20 text-white lg:px-8">
+        <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+          <div data-aos="fade-right">
+            <p class="section-label text-stone-300">Contact</p>
+            <h2 class="section-title text-[#f5f0e7]">
+              Start with a straightforward conversation.
+            </h2>
+            <p class="section-copy text-stone-300">
+              If the business is carrying too much manual effort, weak
+              structure, or too much owner dependency, that is usually the right
+              moment to talk.
+            </p>
+            <div class="mt-8 flex flex-col gap-4 text-sm text-stone-300">
+              <a href="mailto:info@jkgsconsulting.com" class="contact-link"
+                >info@jkgsconsulting.com</a
+              >
+              <a href="tel:+16478282107" class="contact-link">(647) 828-2107</a>
+              <p>Ottawa, Ontario</p>
+            </div>
+            <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="mailto:info@jkgsconsulting.com?subject=Discovery%20Call%20Request"
+                class="button-primary"
+              >
+                Request a Discovery Call
+              </a>
+              <a href="contact.html" class="button-secondary-on-dark">
+                View Contact Page
+              </a>
+            </div>
+          </div>
+
+          <div class="rounded-[2rem] border border-white/10 bg-white/5 p-8" data-aos="fade-left">
+            <form
+              action="https://formspree.io/f/mwpvgppl"
+              method="POST"
+              class="grid gap-5"
+            >
+              <div>
+                <label for="name" class="form-label">Name</label>
+                <input id="name" name="name" type="text" class="form-input" />
+              </div>
+              <div>
+                <label for="company" class="form-label">Business</label>
+                <input id="company" name="company" type="text" class="form-input" />
+              </div>
+              <div>
+                <label for="email" class="form-label">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  class="form-input"
+                />
+              </div>
+              <div>
+                <label for="interest" class="form-label">What are you looking for?</label>
+                <select id="interest" name="interest" class="form-input">
+                  <option>Workflow audit</option>
+                  <option>AI pilot</option>
+                  <option>Strategic advisory</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+              <div>
+                <label for="message" class="form-label">What is slowing things down right now?</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  class="form-input"
+                  placeholder="A few lines on the business, the problem, and what kind of support would be useful."
+                ></textarea>
+              </div>
+              <input type="hidden" name="_subject" value="New JKGS Consulting inquiry" />
+              <input type="hidden" name="_next" value="https://jkgsconsulting.com/success.html" />
+              <button type="submit" class="button-primary">Send Inquiry</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#0b1111] px-6 py-8 text-sm text-stone-400 lg:px-8">
+      <div
+        class="mx-auto flex max-w-7xl flex-col gap-4 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between"
+      >
+        <p>&copy; 2025 JKGS Consulting. All rights reserved.</p>
+        <div class="flex gap-5">
+          <a href="services.html" class="transition hover:text-white">Services</a>
+          <a href="contact.html" class="transition hover:text-white">Contact</a>
+        </div>
       </div>
     </footer>
 
-    <!-- AOS JS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-      AOS.init({ mirror: false });
+      AOS.init({ mirror: false, once: true, offset: 32 });
     </script>
-
-    <!-- Custom JavaScript -->
     <script src="js/main.js"></script>
   </body>
 </html>

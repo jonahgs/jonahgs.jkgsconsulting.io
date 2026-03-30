@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JKGS Social Card Mock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #10201c;
+        --bg-deep: #0b1412;
+        --panel: rgba(255, 255, 255, 0.08);
+        --line: rgba(255, 255, 255, 0.14);
+        --text: #f5f0e7;
+        --muted: #d7d0c4;
+        --green: #3a6b61;
+        --green-soft: #7eb9a8;
+        --ochre: #d3b06b;
+        --ochre-soft: #f0ddb4;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: #e8e1d5;
+        font-family: "Manrope", sans-serif;
+      }
+
+      .card {
+        position: relative;
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 16% 18%, rgba(211, 176, 107, 0.18), transparent 20%),
+          radial-gradient(circle at 88% 80%, rgba(126, 185, 168, 0.16), transparent 22%),
+          linear-gradient(135deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+          linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+          linear-gradient(145deg, var(--bg), var(--bg-deep));
+        background-size: auto, auto, 38px 38px, 38px 38px, auto;
+        color: var(--text);
+      }
+
+      .card::before,
+      .card::after {
+        content: "";
+        position: absolute;
+        border-radius: 42% 58% 54% 46% / 46% 38% 62% 54%;
+        pointer-events: none;
+      }
+
+      .card::before {
+        top: -120px;
+        right: -70px;
+        width: 420px;
+        height: 420px;
+        background: linear-gradient(145deg, rgba(58, 107, 97, 0.8), rgba(126, 185, 168, 0.4));
+        opacity: 0.55;
+        transform: rotate(24deg);
+      }
+
+      .card::after {
+        left: -90px;
+        bottom: -150px;
+        width: 360px;
+        height: 360px;
+        background: linear-gradient(145deg, rgba(211, 176, 107, 0.22), rgba(58, 107, 97, 0.08));
+        opacity: 0.6;
+        transform: rotate(-18deg);
+      }
+
+      .inner {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1.28fr 0.72fr;
+        gap: 34px;
+        padding: 52px 58px 52px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 34px;
+      }
+
+      .brand img {
+        height: 56px;
+        width: auto;
+      }
+
+      .brand-name {
+        font-size: 15px;
+        font-weight: 800;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+      }
+
+      .kicker {
+        display: inline-flex;
+        align-items: center;
+        border: 1px solid rgba(240, 221, 180, 0.24);
+        border-radius: 999px;
+        padding: 10px 18px;
+        color: var(--ochre-soft);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        background: rgba(211, 176, 107, 0.08);
+      }
+
+      h1 {
+        margin: 26px 0 0;
+        max-width: 680px;
+        font-family: "Newsreader", serif;
+        font-size: 60px;
+        line-height: 1.02;
+        font-weight: 600;
+        letter-spacing: -0.03em;
+      }
+
+      .sub {
+        margin: 22px 0 0;
+        max-width: 520px;
+        font-size: 20px;
+        line-height: 1.4;
+        color: var(--muted);
+      }
+
+      .side {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: stretch;
+      }
+
+      .panel {
+        border: 1px solid var(--line);
+        border-radius: 34px;
+        padding: 24px 24px 22px;
+        background: var(--panel);
+        backdrop-filter: blur(12px);
+        box-shadow: 0 28px 80px rgba(0, 0, 0, 0.18);
+      }
+
+      .panel-label {
+        color: var(--ochre-soft);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      .panel-title {
+        margin: 12px 0 0;
+        font-size: 21px;
+        line-height: 1.16;
+        font-weight: 700;
+      }
+
+      .flow {
+        margin-top: 18px;
+        display: grid;
+        gap: 8px;
+      }
+
+      .flow-step {
+        display: grid;
+        grid-template-columns: 42px 1fr;
+        gap: 14px;
+        align-items: center;
+        padding: 11px 13px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .flow-step.active {
+        background: #f5f0e7;
+        color: #1d2321;
+        border-color: rgba(211, 176, 107, 0.45);
+      }
+
+      .num {
+        display: grid;
+        place-items: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 999px;
+        border: 1px solid rgba(240, 221, 180, 0.3);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        color: var(--ochre-soft);
+      }
+
+      .flow-step.active .num {
+        color: #8a6530;
+        border-color: rgba(138, 101, 48, 0.18);
+        background: rgba(211, 176, 107, 0.12);
+      }
+
+      .flow-step strong {
+        display: block;
+        font-size: 14px;
+        line-height: 1.2;
+      }
+
+      .flow-step span {
+        display: block;
+        margin-top: 4px;
+        font-size: 11px;
+        line-height: 1.35;
+        color: rgba(245, 240, 231, 0.72);
+      }
+
+      .flow-step.active span {
+        color: rgba(29, 35, 33, 0.7);
+      }
+
+    </style>
+  </head>
+  <body>
+    <article class="card">
+      <div class="inner">
+        <section>
+          <div class="brand">
+            <img src="assets/images/logo.png" alt="JKGS Consulting logo" />
+            <div class="brand-name">JKGS Consulting</div>
+          </div>
+          <div class="kicker">Strategic advisory for owner-led businesses</div>
+          <h1>Better systems, clearer workflows, practical AI adoption.</h1>
+          <p class="sub">
+            Helping businesses reduce friction, improve operations, and build
+            better ways for work to move.
+          </p>
+        </section>
+
+        <aside class="side">
+          <div class="panel">
+            <div class="panel-label">What the work clarifies</div>
+            <div class="panel-title">How business problems move from friction to follow-through.</div>
+            <div class="flow">
+              <div class="flow-step">
+                <div class="num">01</div>
+                <div>
+                  <strong>What is showing up</strong>
+                  <span>Requests, bottlenecks, recurring friction</span>
+                </div>
+              </div>
+              <div class="flow-step active">
+                <div class="num">02</div>
+                <div>
+                  <strong>Where it lands</strong>
+                  <span>Who it affects, where work stalls</span>
+                </div>
+              </div>
+              <div class="flow-step">
+                <div class="num">03</div>
+                <div>
+                  <strong>What matters now</strong>
+                  <span>Priorities, decisions, ownership</span>
+                </div>
+              </div>
+              <div class="flow-step">
+                <div class="num">04</div>
+                <div>
+                  <strong>What carries forward</strong>
+                  <span>Workflows, documentation, stronger follow-through</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </article>
+  </body>
+</html>
