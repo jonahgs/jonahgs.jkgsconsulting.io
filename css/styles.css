@@ -220,6 +220,23 @@
     @apply mt-2 text-base leading-7 text-stone-600;
   }
 
+  @media (min-width: 1024px) {
+    .approach-step + .approach-step {
+      position: relative;
+    }
+
+    .approach-step + .approach-step::before {
+      content: "\2192";
+      position: absolute;
+      left: -0.75rem;
+      top: 2.25rem;
+      transform: translateX(-50%);
+      font-size: 1rem;
+      color: rgba(53, 86, 79, 0.35);
+      pointer-events: none;
+    }
+  }
+
   .package-card {
     @apply rounded-[2rem] bg-[#17312b] p-8 text-stone-100 shadow-[0_25px_60px_rgba(15,23,20,0.12)] transition hover:-translate-y-1 hover:bg-[#203b35];
   }
@@ -245,7 +262,7 @@
   }
 
   .detail-card {
-    @apply rounded-[2rem] border border-[#35564f]/14 p-8;
+    @apply rounded-[2rem] border border-[#35564f]/14 p-6 lg:p-8;
     background:
       linear-gradient(135deg, rgba(255,255,255,0.7) 1px, transparent 1px),
       linear-gradient(rgba(255,255,255,0.7) 1px, transparent 1px),
@@ -274,15 +291,15 @@
   }
 
   .detail-title {
-    @apply mt-4 text-4xl leading-tight text-stone-900;
+    @apply mt-4 text-3xl leading-tight text-stone-900 lg:text-4xl;
   }
 
   .detail-copy {
-    @apply mt-5 text-lg leading-8 text-stone-600;
+    @apply mt-4 text-base leading-7 text-stone-600 lg:mt-5 lg:text-lg lg:leading-8;
   }
 
   .detail-list-block {
-    @apply rounded-[1.75rem] border border-white/10 bg-[#17312b] p-7 text-stone-100;
+    @apply rounded-[1.75rem] border border-white/10 bg-[#17312b] p-5 text-stone-100 lg:p-7;
     background-image:
       radial-gradient(circle at 16% 18%, rgba(211, 176, 107, 0.12), transparent 24%),
       linear-gradient(135deg, rgba(255,255,255,0.04) 1px, transparent 1px),
@@ -291,15 +308,19 @@
   }
 
   .detail-list-block h3 {
-    @apply text-2xl text-[#f5f0e7];
+    @apply text-xl text-[#f5f0e7] lg:text-2xl;
   }
 
   .detail-list-block ul {
-    @apply mt-5 space-y-3 text-sm leading-7 text-stone-200;
+    @apply mt-4 space-y-2 text-sm leading-6 text-stone-200 lg:mt-5 lg:space-y-3 lg:leading-7;
   }
 
   .detail-list-block li {
     @apply border-t border-white/10 pt-3;
+  }
+
+  .detail-list-block--mobile-3 li:nth-child(n + 4) {
+    display: none;
   }
 
   .faq-item {
@@ -441,7 +462,7 @@
   }
 
   .artifact-panel {
-    @apply relative overflow-hidden rounded-[2rem] border border-[#35564f]/15 bg-[#17312b] p-6 text-stone-100 shadow-[0_24px_70px_rgba(15,23,20,0.14)] lg:p-8;
+    @apply relative overflow-hidden rounded-[2rem] border border-[#35564f]/15 bg-[#17312b] p-5 text-stone-100 shadow-[0_24px_70px_rgba(15,23,20,0.14)] lg:p-8;
     background-image:
       radial-gradient(circle at 14% 18%, rgba(211, 176, 107, 0.16), transparent 24%),
       radial-gradient(circle at 86% 74%, rgba(165, 111, 89, 0.12), transparent 22%),
@@ -454,7 +475,7 @@
   }
 
   .artifact-header h3 {
-    @apply mt-2 text-2xl text-[#f5f0e7] lg:text-3xl;
+    @apply mt-2 text-xl text-[#f5f0e7] lg:text-3xl;
   }
 
   .artifact-badge {
@@ -478,7 +499,7 @@
   }
 
   .workflow-map {
-    @apply mt-5 grid gap-5;
+    @apply mt-4 grid gap-4 lg:mt-5 lg:gap-5;
   }
 
   .workflow-flow {
@@ -486,7 +507,7 @@
   }
 
   .workflow-node {
-    @apply rounded-[1.15rem] border border-white/10 bg-white/5 px-4 py-4;
+    @apply rounded-[1.15rem] border border-white/10 bg-white/5 px-4 py-3 lg:py-4;
     min-height: 0;
   }
 
@@ -503,7 +524,7 @@
   }
 
   .workflow-node h4 {
-    @apply mt-2 text-lg text-[#f5f0e7] lg:text-xl;
+    @apply mt-2 text-base text-[#f5f0e7] lg:text-xl;
   }
 
   .workflow-node--highlight h4 {
@@ -511,7 +532,7 @@
   }
 
   .workflow-node p {
-    @apply mt-2 text-sm leading-5 text-stone-300;
+    @apply mt-1.5 text-sm leading-5 text-stone-300;
   }
 
   .workflow-node--highlight p {
@@ -556,6 +577,10 @@
   }
 
   @media (max-width: 767px) {
+    .page-copy {
+      @apply text-base leading-7;
+    }
+
     .artifact-row,
     .artifact-row--head {
       display: none;
@@ -567,6 +592,10 @@
 
     .workflow-flow {
       @apply grid-cols-1 gap-2;
+    }
+
+    .workflow-summary {
+      display: none;
     }
 
     .motif-anchor--hero::before {
@@ -583,6 +612,12 @@
       width: 14rem;
       height: 14rem;
       opacity: 0.22;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .detail-list-block--mobile-3 li:nth-child(n + 4) {
+      display: list-item;
     }
   }
 

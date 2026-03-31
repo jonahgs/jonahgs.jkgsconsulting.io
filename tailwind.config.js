@@ -17,8 +17,8 @@ module.exports = {
     fontSize: defaultTheme.fontSize,
     extend: {
       fontFamily: {
-        // Keep Poppins plus the normal Tailwind sans stack
-        sans: ["Poppins", ...defaultTheme.fontFamily.sans],
+        // Keep Manrope plus the normal Tailwind sans stack
+        sans: ["Manrope", ...defaultTheme.fontFamily.sans],
       },
       // Custom keyframes for the animated gradient
       keyframes: {
