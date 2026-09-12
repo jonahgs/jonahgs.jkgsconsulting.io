@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex, nofollow"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Surface Server Backup — Privacy information</title><style>body{max-width:48rem;margin:3rem auto;padding:0 1.25rem;font:18px/1.6 system-ui,sans-serif;color:#202124}h1{line-height:1.2}h2{font-size:1.2rem;margin-top:2rem}a{color:#1259a7}</style></head><body><main><h1>Surface Server Backup — Privacy information</h1><p>Last updated: September 12, 2026.</p>
+<p>Surface Server Backup is operated for personal use by the owner of <a href="mailto:jonahkgs@gmail.com">jonahkgs@gmail.com</a>.</p>
+<h2>Google data access and purpose</h2>
+<p>The utility requests Google's <code>drive.file</code> permission to create and manage the backup files and folders it creates or is explicitly authorized to access. It uses file contents and metadata to upload encrypted recovery snapshots, list and verify snapshots, restore data and remove older backups. Drive account information may be checked to confirm the intended destination account and available storage.</p>
+<h2>Storage and protection</h2>
+<p>Application data and configuration from the personal server are encrypted with Restic before upload to Google Drive. Google OAuth credentials and refresh tokens are stored in private files on the server to permit scheduled backups. The Restic recovery password is stored separately from the uploaded repository.</p>
+<h2>Sharing and retention</h2>
+<p>Backup data is stored with Google Drive for the owner's recovery use. The utility does not sell Google user data or use it for advertising. Its configured retention keeps seven daily, four weekly and six monthly snapshots, with cleanup performed weekly. The owner controls access to the destination Drive and any separately retained recovery copies.</p>
+<h2>Control and contact</h2>
+<p>The owner can stop the backup service, revoke its Google account authorization, and delete backup files from Drive. Revocation stops future API access; it does not automatically delete previously stored backups. Questions can be sent to <a href="mailto:jonahkgs@gmail.com">jonahkgs@gmail.com</a>.</p>
+<p><a href="index.html">About Surface Server Backup</a></p></main></body></html>
