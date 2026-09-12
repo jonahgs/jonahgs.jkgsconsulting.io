@@ -1,6 +1,30 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex, nofollow"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Surface Server Backup</title><style>body{max-width:48rem;margin:3rem auto;padding:0 1.25rem;font:18px/1.6 system-ui,sans-serif;color:#202124}h1{line-height:1.2}h2{font-size:1.2rem;margin-top:2rem}a{color:#1259a7}</style></head><body><main><h1>Surface Server Backup</h1><p>Surface Server Backup is a private backup utility operated by the owner of <a href="mailto:jonahkgs@gmail.com">jonahkgs@gmail.com</a>.</p>
-<p>It uses Restic and rclone to encrypt application data and configuration from a personal server and store recovery snapshots in the owner's Google Drive. It runs on a nightly schedule.</p>
-<p>Google authorization lets the utility create and manage its own backup files and folders, retrieve them for recovery, and remove older snapshots according to its retention settings. It requests the <code>drive.file</code> permission.</p>
-<p>Use is limited to the owner's personal backup system. The backup files and Google credentials are not served by this website.</p>
-<p><a href="privacy.html">Privacy information</a> · <a href="terms.html">Terms of use</a></p></main></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Personal Backups &amp; Home Assistant</title>
+<style>body{max-width:48rem;margin:3rem auto;padding:0 1.25rem;font:18px/1.6 system-ui,sans-serif;color:#202124}h1{line-height:1.2}h2{font-size:1.2rem;margin-top:2rem}a{color:#1259a7}li{margin:.6rem 0}nav{margin:1.5rem 0}</style>
+</head>
+<body>
+<main>
+<h1>Personal Backups &amp; Home Assistant</h1>
+<p>These pages describe the personal backup and home automation applications operated by the owner of <a href="mailto:jonahkgs@gmail.com">jonahkgs@gmail.com</a>. They cover Surface Server Backup and the owner's Home Assistant deployment, including connections identified as Home Assistant and Home Assist Web SDK.</p>
+<nav aria-label="Information pages"><a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a></nav>
+<h2>Backup and recovery</h2>
+<p>Restic and rclone create encrypted recovery copies of selected server application data and configuration, including Home Assistant's configuration and database. The server application backup runs nightly and stores encrypted snapshots in the owner's Google Drive. Separately configured local server and laptop backups provide additional recovery copies with their own selected files and retention settings.</p>
+<p>The Drive connection uploads, lists and verifies backup snapshots, retrieves files for recovery, and removes older snapshots under the configured retention policy. Coverage depends on each backup job's selected files and applications.</p>
+<h2>Home Assistant connections</h2>
+<ul>
+<li><strong>Google Calendar:</strong> displays authorized calendars and events, supports event-based automations, and creates events when requested and permitted.</li>
+<li><strong>Google Nest:</strong> displays authorized device state, receives device events, and supports permitted controls. Camera or doorbell media is accessed only where supported, configured and authorized.</li>
+<li><strong>Google Assistant SDK:</strong> sends text commands and queries to Google Assistant for the owner's selected controls, information requests or broadcasts, and processes the responses.</li>
+</ul>
+<p>Each connection uses the Google account and permissions the owner authorizes. The applications support personal and authorized household use.</p>
+<h2>Operator and contact</h2>
+<p>This is an independent personal installation using third-party software and services, not an official Google or Home Assistant website. These public information pages contain no backup files, device controls, calendar records or OAuth credentials.</p>
+<p>Questions about this installation or its data practices: <a href="mailto:jonahkgs@gmail.com">jonahkgs@gmail.com</a>.</p>
+</main>
+</body>
+</html>

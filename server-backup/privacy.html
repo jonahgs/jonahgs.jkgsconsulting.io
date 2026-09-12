@@ -1,12 +1,44 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex, nofollow"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Surface Server Backup — Privacy information</title><style>body{max-width:48rem;margin:3rem auto;padding:0 1.25rem;font:18px/1.6 system-ui,sans-serif;color:#202124}h1{line-height:1.2}h2{font-size:1.2rem;margin-top:2rem}a{color:#1259a7}</style></head><body><main><h1>Surface Server Backup — Privacy information</h1><p>Last updated: September 12, 2026.</p>
-<p>Surface Server Backup is operated for personal use by the owner of <a href="mailto:jonahkgs@gmail.com">jonahkgs@gmail.com</a>.</p>
-<h2>Google data access and purpose</h2>
-<p>The utility requests Google's <code>drive.file</code> permission to create and manage the backup files and folders it creates or is explicitly authorized to access. It uses file contents and metadata to upload encrypted recovery snapshots, list and verify snapshots, restore data and remove older backups. Drive account information may be checked to confirm the intended destination account and available storage.</p>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Privacy Policy — Personal Backups &amp; Home Assistant</title>
+<style>body{max-width:48rem;margin:3rem auto;padding:0 1.25rem;font:18px/1.6 system-ui,sans-serif;color:#202124}h1{line-height:1.2}h2{font-size:1.2rem;margin-top:2rem}a{color:#1259a7}li{margin:.6rem 0}nav{margin:1.5rem 0}</style>
+</head>
+<body>
+<main>
+<h1>Privacy Policy — Personal Backups &amp; Home Assistant</h1>
+<p>Last updated: September 12, 2026.</p>
+<p>This policy covers the personal applications operated by the owner of <a href="mailto:jonahkgs@gmail.com">jonahkgs@gmail.com</a>: Surface Server Backup, local and laptop backup services, Home Assistant, and Home Assist Web SDK.</p>
+<nav aria-label="Information pages"><a href="index.html">Application information</a> · <a href="terms.html">Terms of use</a></nav>
+<h2>Data accessed and why</h2>
+<ul>
+<li><strong>Backups:</strong> selected server, application, Home Assistant and separately configured laptop files are processed for recovery. These can include databases, configuration, integration credentials and data already stored by those applications.</li>
+<li><strong>Google Drive:</strong> the server backup requests <code>drive.file</code> permission to manage files and folders it creates or is explicitly authorized to access. Contents and metadata are used to upload encrypted snapshots, list and verify them, restore files and clean up old snapshots. Account identity and storage quota may be checked to confirm the destination and available space.</li>
+<li><strong>Google Calendar:</strong> authorized calendar identifiers and event details, including titles, times, descriptions and locations, support schedule displays and the owner's automations. Event details are sent to Google when an authorized event-creation action is requested.</li>
+<li><strong>Google Nest:</strong> authorized device identifiers, names, state, sensor readings and event notifications support home monitoring and automation. Permitted control commands are sent to Google. Camera or doorbell streams, snapshots or clips may be processed where supported, enabled and authorized.</li>
+<li><strong>Google Assistant SDK:</strong> text commands and queries are sent to Google Assistant, and responses support the requested controls, information or broadcasts. Responses may contain personal results when the owner's Google account permissions and settings allow them.</li>
+<li><strong>Authorization:</strong> OAuth client credentials and access/refresh tokens maintain the connections the owner authorizes. The permissions requested by each connection are shown during Google's consent flow.</li>
+</ul>
 <h2>Storage and protection</h2>
-<p>Application data and configuration from the personal server are encrypted with Restic before upload to Google Drive. Google OAuth credentials and refresh tokens are stored in private files on the server to permit scheduled backups. The Restic recovery password is stored separately from the uploaded repository.</p>
-<h2>Sharing and retention</h2>
-<p>Backup data is stored with Google Drive for the owner's recovery use. The utility does not sell Google user data or use it for advertising. Its configured retention keeps seven daily, four weekly and six monthly snapshots, with cleanup performed weekly. The owner controls access to the destination Drive and any separately retained recovery copies.</p>
-<h2>Control and contact</h2>
-<p>The owner can stop the backup service, revoke its Google account authorization, and delete backup files from Drive. Revocation stops future API access; it does not automatically delete previously stored backups. Questions can be sent to <a href="mailto:jonahkgs@gmail.com">jonahkgs@gmail.com</a>.</p>
-<p><a href="index.html">About Surface Server Backup</a></p></main></body></html>
+<p>Home Assistant configuration, credentials and applicable history, caches, logs or saved media are held on the personal server according to its enabled features. Access is controlled through server and application authentication and file permissions.</p>
+<p>Restic encrypts backup contents before writing them to its local or cloud repositories. The recovery password is kept separately from the uploaded repository. OAuth tokens are stored in private server configuration for unattended operation. Home Assistant data and credentials may also be included in encrypted application backups.</p>
+<h2>Sharing and service providers</h2>
+<p>The applications exchange data with Google for the Drive, Calendar, Nest and Assistant functions described above. Google Cloud messaging may carry Nest device events to Home Assistant. Configured automations may send selected results or notifications to authorized household devices or other destinations selected by the owner.</p>
+<p>These applications do not sell Google user data, use it for advertising, or use it to train generalized machine-learning models. Google user data is used to provide and maintain the requested backup, recovery and home automation functions. Authorized users may access data according to the access the owner grants.</p>
+<p>The applications' use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements. Google's processing is governed by its applicable service terms and <a href="https://policies.google.com/privacy">privacy policy</a>.</p>
+<h2>Retention</h2>
+<p>The server application cloud backup retains seven daily, four weekly and six monthly snapshots, with cleanup performed weekly. Other local or laptop repositories and separately enabled backup tools follow their own settings. A snapshot qualifying for multiple retention categories is stored once.</p>
+<p>Home Assistant history, caches, logs and media follow the owner's configuration and cleanup settings; there is no single retention period for every integration. Recovery copies remain until their retention policy removes them or the owner deletes them. Original Google account data follows the owner's settings with Google.</p>
+<h2>Revocation and deletion</h2>
+<p>The owner can disable or remove integrations, stop backup services, revoke application access in <a href="https://myaccount.google.com/connections">Google account connections</a>, and change which devices or data are shared with Home Assistant. Revocation stops future authorized API access; it does not automatically erase previously stored local data or backup snapshots.</p>
+<p>The owner can remove retained copies by deleting the relevant local data or backup snapshots and, where applicable, deleting backup folders and emptying their trash in Google Drive. Original Calendar, Nest and Assistant records are managed separately through Google's product and account controls. Authorized users can contact the operator for help with access or deletion.</p>
+<h2>This information website</h2>
+<p>These static pages contain explanatory text and contact links. They contain no sign-in form, backup data or home controls and add no analytics scripts or tracking cookies. GitHub Pages hosts the site and processes requests under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>.</p>
+<h2>Contact and changes</h2>
+<p>Contact <a href="mailto:jonahkgs@gmail.com">jonahkgs@gmail.com</a> with privacy, access or deletion questions. This policy will be updated when the described practices change, with the revision date shown above.</p>
+</main>
+</body>
+</html>
