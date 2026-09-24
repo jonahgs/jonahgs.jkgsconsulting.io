@@ -61,7 +61,7 @@
     const support = select.options[select.selectedIndex].text;
     const draft = `Hi Jonah,\n\n${message}\n\nSupport I am considering: ${support}\n${business ? `Business: ${business}\n` : ''}\n${name}\n${email}`;
     content.textContent = draft;
-    const subject = `JKGS consulting enquiry${business ? ' — ' + business : ''}`;
+    const subject = `JKGS consulting enquiry${business ? ' - ' + business : ''}`;
     document.querySelector('#open-email').href = `mailto:info@jkgsconsulting.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(draft)}`;
     status.textContent = '';
     form.hidden = true;
