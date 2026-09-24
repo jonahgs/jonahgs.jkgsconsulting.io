@@ -377,7 +377,7 @@ summary:hover { color: #697953; }
   .closing-inner { display: block; }
   .closing h2 { font-size: 2.9rem; }
   .closing p:not(.eyebrow) { font-size: .84rem; }
-  .closing .button { margin-top: 29px; }
+  .closing .draft-actions { margin-top: 29px; }
   .site-footer { padding-top: 44px; }
   .footer-top { grid-template-columns: 1fr 1fr; gap: 30px; }
   .footer-top p { font-size: 1.7rem; }
