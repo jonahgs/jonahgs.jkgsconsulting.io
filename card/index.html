@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#183e35">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="canonical" href="https://jkgsconsulting.com/">
+  <title>Continue to JKGS Consulting</title>
+  <noscript><meta http-equiv="refresh" content="0;url=https://jkgsconsulting.com/?utm_source=business_card&amp;utm_medium=qr&amp;utm_campaign=business_card"></noscript>
+  <style>
+    html { color-scheme: light; background: #f7f5ef; color: #183e35; }
+    body { max-width: 36rem; margin: 15vh auto; padding: 1.5rem; font: 1rem/1.6 Manrope, Arial, sans-serif; }
+    h1 { font-size: 1.5rem; line-height: 1.3; }
+    a { color: inherit; text-underline-offset: .2em; }
+    a:focus-visible { outline: 2px solid currentColor; outline-offset: .3rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>JKGS Consulting</h1>
+    <p>Opening the website…</p>
+    <p><a id="continue" href="https://jkgsconsulting.com/?utm_source=business_card&amp;utm_medium=qr&amp;utm_campaign=business_card">Continue to JKGS Consulting</a></p>
+  </main>
+  <script>
+    (function () {
+      'use strict';
+
+      // This owner-controlled destination can change without reprinting the QR.
+      var destination = new URL('https://jkgsconsulting.com/');
+      var isTest = new URLSearchParams(window.location.search).get('test') === '1';
+      var source = isTest ? 'business_card_test' : 'business_card';
+      destination.searchParams.set('utm_source', source);
+      destination.searchParams.set('utm_medium', 'qr');
+      destination.searchParams.set('utm_campaign', source);
+
+      var link = document.getElementById('continue');
+      link.href = destination.href;
+      var navigating = false;
+      function continueToWebsite() {
+        if (navigating) return;
+        navigating = true;
+        window.location.replace(destination.href);
+      }
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        continueToWebsite();
+      });
+
+      // A blocked or slow analytics tag must never prevent access to the site.
+      window.setTimeout(continueToWebsite, 2000);
+
+      // Suppress card events locally; use ?test=1 when testing the live fallback.
+      if (window.location.hostname !== 'jkgsconsulting.com' &&
+          window.location.hostname !== 'www.jkgsconsulting.com') return;
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { window.dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-R0ZM6XL6X2', {
+        send_page_view: false,
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+        page_location: 'https://jkgsconsulting.com/card',
+        page_referrer: '',
+        campaign_source: source,
+        campaign_medium: 'qr',
+        campaign_name: source
+      });
+      gtag('event', isTest ? 'business_card_test' : 'business_card_visit', {
+        send_to: 'G-R0ZM6XL6X2',
+        page_location: 'https://jkgsconsulting.com/card',
+        page_title: 'JKGS business card',
+        page_referrer: '',
+        event_callback: continueToWebsite,
+        event_timeout: 1500
+      });
+      var tag = document.createElement('script');
+      tag.async = true;
+      tag.src = 'https://www.googletagmanager.com/gtag/js?id=G-R0ZM6XL6X2';
+      document.head.appendChild(tag);
+    }());
+  </script>
+</body>
+</html>
