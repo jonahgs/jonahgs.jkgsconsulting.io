@@ -85,7 +85,7 @@
  .focused-hero .eyebrow { max-width: 36em; }
  .focused-art { align-self: center; margin: 0 -12px 0 0; }
  .focused-note { margin-bottom: 0; }
- .service-directions { grid-template-columns: repeat(3, 1fr); margin-top: 12px; }
+ .service-directions { grid-template-columns: 1fr 1fr; margin-top: 12px; }
  .service-directions a { padding-block: 21px; }
  .service-directions a + a { border-top: 0; border-left: 1px solid var(--line); margin-left: 24px; padding-left: 28px; }
  .home-person { padding-block: 48px; }
