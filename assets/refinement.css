@@ -1,7 +1,7 @@
 /* October refinement: one clear offer, an early introduction, a quieter canvas. */
 .focused-hero { display: grid; grid-template-columns: minmax(0, 1fr); padding-top: 34px; }
 .focused-hero-copy { min-width: 0; }
-.focused-hero .eyebrow { font-size: .66rem; letter-spacing: .07em; margin-bottom: 20px; }
+.focused-hero .eyebrow { font-size: .72rem; letter-spacing: .07em; margin-bottom: 20px; }
 .focused-hero h1 { font-size: clamp(2.2rem, 8.5vw, 3.8rem); line-height: 1.08; letter-spacing: -.035em; text-wrap: pretty; }
 .focused-hero h1 em { color: #54674b; }
 .focused-description { max-width: 31em; margin-block: 22px 0; color: var(--muted); font-size: 1rem; line-height: 1.7; }
@@ -85,7 +85,7 @@
  .focused-hero .eyebrow { max-width: 36em; }
  .focused-art { align-self: center; margin: 0 -12px 0 0; }
  .focused-note { margin-bottom: 0; }
- .service-directions { grid-template-columns: 1fr 1fr; margin-top: 12px; }
+ .service-directions { grid-template-columns: repeat(3, 1fr); margin-top: 12px; }
  .service-directions a { padding-block: 21px; }
  .service-directions a + a { border-top: 0; border-left: 1px solid var(--line); margin-left: 24px; padding-left: 28px; }
  .home-person { padding-block: 48px; }
