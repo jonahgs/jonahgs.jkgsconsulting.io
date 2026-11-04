@@ -321,8 +321,10 @@
     const ai = value('q-ai');
     const channels = CHANNELS.filter(id => value(id));
     const has = id => channels.includes(id);
+    const PLAT = { 'Shopify': 'shopify', 'Wix': 'wix', 'WooCommerce': 'woo', 'Squarespace': 'squarespace', 'Etsy only': 'etsy', 'Amazon only': 'amazon', 'Instagram or DMs, no website': 'social', 'Other': 'other' };
+    const plat = PLAT[platform] || '';
     return {
-      platform, email, ai, channels, has,
+      platform, plat, email, ai, channels, has,
       answered: Boolean(platform || email || ai || channels.length),
       shopify: platform === 'Shopify',
       google: email === 'Gmail' || email === 'Google Workspace',
@@ -336,6 +338,13 @@
     shopify: p => !p.platform || p.shopify,
     'not-shopify': p => Boolean(p.platform) && !p.shopify,
     'platform-unknown': p => !p.platform,
+    'p-wix': p => p.plat === 'wix',
+    'p-woo': p => p.plat === 'woo',
+    'p-etsy': p => p.plat === 'etsy',
+    'p-amazon': p => p.plat === 'amazon',
+    'p-social': p => p.plat === 'social',
+    'p-generic': p => p.plat === 'squarespace' || p.plat === 'other',
+    'p-site': p => ['wix', 'woo', 'squarespace', 'other'].includes(p.plat),
     gmail: p => !p.email || p.google,
     outlook: p => p.outlook,
     'email-other': p => p.emailOther,
@@ -346,8 +355,8 @@
     'save-shopify': p => p.shopify,
     'save-gmail': p => p.google,
     'save-email': p => p.outlook || p.emailOther,
-    'save-meta': p => p.has('ch-igdm') || p.has('ch-comments'),
-    'save-market': p => p.has('ch-market') || (p.has('ch-chat') && Boolean(p.platform) && !p.shopify),
+    'save-meta': p => p.has('ch-igdm') || p.has('ch-comments') || p.plat === 'social',
+    'save-market': p => p.has('ch-market') || p.plat === 'etsy' || p.plat === 'amazon' || (p.has('ch-chat') && Boolean(p.platform) && !p.shopify),
     'ai-chatgpt': p => p.ai === 'ChatGPT' || (p.noPaidAI && !p.workspace),
     'ai-claude': p => p.ai === 'Claude' || (p.noPaidAI && !p.workspace),
     'ai-gemini': p => p.workspace,
@@ -374,12 +383,13 @@
   function renderTailor() {
     const p = profile();
     document.querySelectorAll('[data-when]').forEach(el => {
-      const test = WHEN[el.dataset.when];
-      el.hidden = test ? !test(p) : false;
+      const tests = el.dataset.when.split(/\s+/).map(key => WHEN[key]).filter(Boolean);
+      el.hidden = tests.length ? !tests.some(test => test(p)) : false;
     });
     applyGroups(p);
     const names = [];
-    if (p.platform && p.platform !== 'Other') names.push(p.platform === 'Etsy only' ? 'Etsy' : p.platform);
+    const PLAT_NAME = { etsy: 'Etsy', amazon: 'Amazon', social: 'Instagram' };
+    if (p.platform && p.platform !== 'Other') names.push(PLAT_NAME[p.plat] || p.platform);
     if (p.email && !p.emailOther) names.push(p.outlook ? 'Outlook' : p.email);
     if (p.ai === 'None') names.push('free AI plans');
     else if (p.ai) names.push(p.ai);
@@ -395,8 +405,10 @@
       if (p.shopify && (p.has('ch-chat') || !p.channels.length)) where.push('Shopify Inbox');
       if (p.google) where.push('Gmail');
       if (p.outlook) where.push('Outlook');
-      if (p.has('ch-igdm')) where.push('Instagram');
-      if (p.has('ch-market')) where.push('Etsy or Amazon');
+      if (p.has('ch-igdm') || p.plat === 'social') where.push('Instagram');
+      if (p.plat === 'etsy') where.push('Etsy');
+      else if (p.plat === 'amazon') where.push('Amazon');
+      else if (p.has('ch-market')) where.push('Etsy or Amazon');
       day4.textContent = where.length ? `Save your five replies in ${joinList(where)}.` : day4.dataset.default;
     }
     const day5 = $('day-text-5');
