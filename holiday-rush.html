@@ -31,10 +31,10 @@
   <link rel="stylesheet" href="assets/site.css?v=audience-photos-20261010">
   <link rel="stylesheet" href="assets/mobile-flow.css?v=20261010-2">
   <link rel="stylesheet" href="assets/refinement.css?v=20261010-7">
-  <link rel="stylesheet" href="assets/holiday-rush.css?v=20261104-1">
+  <link rel="stylesheet" href="assets/holiday-rush.css?v=20261104-2">
   <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Organization", "@id": "https://jkgsconsulting.com/#business", "name": "JKGS Consulting", "url": "https://jkgsconsulting.com/", "logo": "https://jkgsconsulting.com/assets/images/jkgs-vessel-v2.webp", "email": "info@jkgsconsulting.com", "areaServed": [{"@type": "City", "name": "Ottawa"}, {"@type": "Country", "name": "Canada"}], "founder": {"@type": "Person", "@id": "https://jkgsconsulting.com/about.html#jonah", "name": "Jonah Greenbaum-Shinder"}}, {"@context": "https://schema.org", "@type": "WebPage", "name": "Holiday Customer Messages: A Setup Guide for Small Shops | JKGS Consulting", "url": "https://jkgsconsulting.com/holiday-rush.html", "description": "A free step-by-step guide for small online shops: saved replies, AI drafts you check before sending, fewer \"Where's my order?\" emails and a clear handoff to a person. Starts with free tools.", "inLanguage": "en-CA", "author": {"@id": "https://jkgsconsulting.com/about.html#jonah"}, "publisher": {"@id": "https://jkgsconsulting.com/#business"}, "dateModified": "2026-11-04"}]</script>
   <script defer src="assets/site.js?v=2b39fdee7cd3"></script>
-  <script defer src="assets/holiday-rush.js?v=20261104-1"></script>
+  <script defer src="assets/holiday-rush.js?v=20261104-2"></script>
 </head>
 <body class="page-holiday-rush">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -190,7 +190,7 @@
               </div>
               <div class="hr-copy">
                 <div class="hr-copy-head"><span class="hr-copy-label"><b>Banner wording</b></span><button class="hr-copy-btn" type="button" data-copy="copy-banner">Copy</button></div>
-                <pre id="copy-banner">Order by December <mark>[date]</mark> for delivery before the 25th. Local pickup until December <mark>[date]</mark>.</pre>
+                <pre id="copy-banner">Recommended order-by date: December <mark>[date]</mark>, for expected delivery before December 25 with <mark>[shipping service]</mark> to <mark>[where you ship]</mark>. Local pickup until December <mark>[date]</mark>.</pre>
               </div>
             </div>
 
@@ -225,7 +225,7 @@ If you'd rather change or cancel your order, just reply to this email.
               <ul class="hr-checklist">
                 <li><input type="checkbox" id="gate-1" data-save><label for="gate-1"><strong>It's a fixed fact.</strong> Hours, pickup, cutoffs, the return window. Never order status, delivery promises, stock, refunds, exceptions, damage, complaints, allergy or safety questions.</label></li>
                 <li><input type="checkbox" id="gate-2" data-save><label for="gate-2"><strong>It sends words you wrote and checked.</strong> Saved replies, instant answers and FAQ buttons send your exact text. If an AI tool sends on its own, it may answer only from your facts page and must pass everything else to a person.</label></li>
-                <li><input type="checkbox" id="gate-3" data-save><label for="gate-3"><strong>It passed the tricky tests.</strong> Run <button type="button" class="hr-link" data-go="prompt-5">prompt 5</button>'s six difficult customers against it: a rush, an exception, stock, a late order, &ldquo;ignore the policy&rdquo;, an unclear message. No made-up promises, and anything unusual goes to a person.</label></li>
+                <li><input type="checkbox" id="gate-3" data-save><label for="gate-3"><strong>It passed the tricky tests.</strong> Use <button type="button" class="hr-link" data-go="prompt-5">prompt 5</button> to write six difficult customers' messages (a rush, an exception, stock, a late order, &ldquo;ignore the policy&rdquo;, an unclear message), then send them through your real setup and check each answer yourself. No made-up promises, and anything unusual goes to a person.</label></li>
                 <li><input type="checkbox" id="gate-4" data-save><label for="gate-4"><strong>A week of drafts you didn't need to change.</strong> On its own this isn't enough; it's one of six checks.</label></li>
                 <li><input type="checkbox" id="gate-5" data-save><label for="gate-5"><strong>The way out works.</strong> Every automatic reply says how to reach a person, and that route lands somewhere watched. Test it: send &ldquo;my order arrived broken&rdquo; through that channel and check it reaches the person who handles it.</label></li>
                 <li><input type="checkbox" id="gate-6" data-save><label for="gate-6"><strong>Someone owns it.</strong> One person checks automatic replies every week and updates them the day your facts change, like holiday hours or cutoffs. If one wrong answer goes out, switch it back to drafts.</label></li>
@@ -260,10 +260,10 @@ We can't confirm by message: stock, order status, guaranteed arrival dates.</pre
               <ol class="hr-steps">
                 <li>Pick a question you answer over and over.</li>
                 <li>Write the answer you know is right. That's your first shop fact. No facts handy? Use the practice shop above.</li>
-                <li>Paste the reply prompt with your fact and the question into any AI tool, then run the 20-second check below.</li>
+                <li>Remove customer names, emails and order numbers. Then paste the reply prompt with your fact and the question into any AI tool, and run the 20-second check below.</li>
                 <li>Try one tricky version: a rush, or &ldquo;can you make an exception?&rdquo;</li>
               </ol>
-              <p class="hr-note">Had to change the draft? The fix usually belongs on your facts page. <button type="button" class="hr-link" data-go="prompt-8">Prompt 8</button> writes the line to add.</p>
+              <p class="hr-note">Had to change the draft? <button type="button" class="hr-link" data-go="prompt-8">Prompt 8</button> helps you work out why: a missing fact, an unclear instruction, or the tool not following them.</p>
             </div>
             <div class="hr-callout">
               <h4>The 20-second check before you send</h4>
@@ -468,7 +468,7 @@ If the facts can't answer a question, say so instead of writing a reply.
 
 Facts page: <mark>[paste]</mark>
 Questions: <mark>[paste]</mark></pre></div>
-              <div class="hr-copy" id="prompt-5"><div class="hr-copy-head"><span class="hr-copy-label"><b>Prompt 5 · Stress-test your replies</b> · Day 5</span><button class="hr-copy-btn" type="button" data-copy="pre-p5">Copy</button></div><pre id="pre-p5">Act as six difficult customers writing to <mark>[shop name]</mark> in December: one in a rush, one asking for an exception, one asking about stock, one upset about a late order, one asking us to ignore the policy, one whose message is unclear.
+              <div class="hr-copy" id="prompt-5"><div class="hr-copy-head"><span class="hr-copy-label"><b>Prompt 5 · Stress-test your replies</b> · Day 5 · a helper: then send the six messages through your real setup and check the answers yourself</span><button class="hr-copy-btn" type="button" data-copy="pre-p5">Copy</button></div><pre id="pre-p5">Act as six difficult customers writing to <mark>[shop name]</mark> in December: one in a rush, one asking for an exception, one asking about stock, one upset about a late order, one asking us to ignore the policy, one whose message is unclear.
 Write their messages. Then reply to each using only the facts page and the reply prompt below.
 Flag any reply that promises something the facts don't support.
 
@@ -489,9 +489,9 @@ Our voice: <mark>[three words]</mark>. No pressure tactics and no fake urgency.
 
 About the guide: <mark>[one or two lines]</mark></pre></div>
               <p class="hr-note">Then build it in Manychat: Automations › New Automation › Auto-DM links from comments (<a href="https://help.manychat.com/hc/en-us/articles/16654065283100-Quick-Automation-Auto-DM-links-from-comments" target="_blank" rel="noopener">Manychat help</a>). The free plan is enough to test (about 25 people a month; check the current limit). Test it from a second account before you announce it. Someone who comments GIFT asked for the guide, not for promotions, so leave follow-up messages and email collection off (<a href="https://crtc.gc.ca/eng/com500/faq500.htm" target="_blank" rel="noopener">CRTC anti-spam guidance</a>).</p>
-              <div class="hr-copy" id="prompt-8"><div class="hr-copy-head"><span class="hr-copy-label"><b>Prompt 8 · Fix the facts, not just the reply</b> · every time you correct a draft</span><button class="hr-copy-btn" type="button" data-copy="pre-p8">Copy</button></div><pre id="pre-p8">Here is a draft reply I had to correct, and my corrected version.
-What was missing or wrong on our facts page that caused the mistake?
-Write the exact line I should add or change, under the right heading.
+              <div class="hr-copy" id="prompt-8"><div class="hr-copy-head"><span class="hr-copy-label"><b>Prompt 8 · Find out why a draft went wrong</b> · every time you correct a draft</span><button class="hr-copy-btn" type="button" data-copy="pre-p8">Copy</button></div><pre id="pre-p8">Compare the facts page, the draft and my correction.
+Did the mistake come from missing facts, unclear instructions, or the tool not following them?
+Suggest only changes my correction supports. If the facts are already correct, say so.
 
 Facts page: <mark>[paste]</mark>
 Draft: <mark>[paste]</mark>
@@ -519,7 +519,7 @@ My correction: <mark>[paste]</mark></pre></div>
           <li><label class="hr-day-check"><input type="checkbox" id="week-2" data-save><span class="sr-only">Mark Day 2 done</span></label><button type="button" class="hr-day-go" data-go="part-2"><span class="number">Day 2</span><span class="hr-day-text" id="day-text-2" data-default="Work through the order-status checklist for your platform.">Work through the order-status checklist for your platform.</span><span class="hr-day-to">Part 2</span></button></li>
           <li><label class="hr-day-check"><input type="checkbox" id="week-3" data-save><span class="sr-only">Mark Day 3 done</span></label><button type="button" class="hr-day-go" data-go="prompt-3"><span class="number">Day 3</span><span class="hr-day-text" id="day-text-3" data-default="Add your holiday details to the facts page from Lab 2, and name who keeps it current.">Add your holiday details to the facts page from Lab 2, and name who keeps it current.</span><span class="hr-day-to">Prompt 3</span></button></li>
           <li><label class="hr-day-check"><input type="checkbox" id="week-4" data-save><span class="sr-only">Mark Day 4 done</span></label><button type="button" class="hr-day-go" data-go="save-replies"><span class="number">Day 4</span><span class="hr-day-text" id="day-text-4" data-default="Save your other four replies, and switch on the Needs a person filter.">Save your other four replies, and switch on the Needs a person filter.</span><span class="hr-day-to">Part 4, step 3</span></button></li>
-          <li><label class="hr-day-check"><input type="checkbox" id="week-5" data-save><span class="sr-only">Mark Day 5 done</span></label><button type="button" class="hr-day-go" data-go="auto-rules"><span class="number">Day 5</span><span class="hr-day-text" id="day-text-5" data-default="Stress-test your replies, then run one fixed question as drafts you check. After a week with no changes needed, it can answer on its own.">Stress-test your replies, then run one fixed question as drafts you check. After a week with no changes needed, it can answer on its own.</span><span class="hr-day-to">Part 3</span></button></li>
+          <li><label class="hr-day-check"><input type="checkbox" id="week-5" data-save><span class="sr-only">Mark Day 5 done</span></label><button type="button" class="hr-day-go" data-go="auto-rules"><span class="number">Day 5</span><span class="hr-day-text" id="day-text-5" data-default="Stress-test your replies, then run one fixed question as drafts you check. Keep AI replies as drafts this week: answering on its own needs all six checks, including a working handoff and someone reviewing it.">Stress-test your replies, then run one fixed question as drafts you check. Keep AI replies as drafts this week: answering on its own needs all six checks, including a working handoff and someone reviewing it.</span><span class="hr-day-to">Part 3</span></button></li>
           <li data-when="instagram"><label class="hr-day-check"><input type="checkbox" id="week-6" data-save><span class="sr-only">Mark Week 2 done</span></label><button type="button" class="hr-day-go" data-go="prompt-7"><span class="number">Week 2</span><span class="hr-day-text" id="day-text-6" data-default="Selling on Instagram? Set up the comment-GIFT DM.">Selling on Instagram? Set up the comment-GIFT DM.</span><span class="hr-day-to">Prompt 7</span></button></li>
           </ol>
           <div class="hr-plan" id="plan">

@@ -199,7 +199,7 @@
       }
     }
     if (has('ch-igdm')) items.push(tool('Meta Business Suite FAQs and greeting', 'save-meta', 'Fixed answers on Instagram and Facebook.', ['Sends', 'Free']));
-    if (has('ch-comments')) items.push(tool('Manychat comment-to-DM', 'prompt-7', 'Someone comments GIFT and gets your gift guide by DM. Free to test (about 25 people a month); paid plans from about US$14 a month. No follow-up messages.', ['Sends', 'Free to test']));
+    if (has('ch-comments')) items.push(tool('Manychat comment-to-DM', 'prompt-7', 'Someone comments GIFT and gets your gift guide by DM. Free to test (about 25 people a month); paid plans about US$17 a month, or US$14 a month billed yearly. No follow-up messages.', ['Sends', 'Free to test']));
     if (has('ch-market')) items.push(tool('Saved replies on Etsy or Amazon', 'save-market', 'Etsy has saved replies in Messages. On Amazon, paste them from a document. Write them with prompt 4.', ['You send', 'Free']));
     if (has('ch-phone')) items.push(tool('Your facts page by the phone', 'part-4', 'Read answers from the same page. This guide doesn\'t cover phone tools.', ['Free']));
 
@@ -286,9 +286,13 @@
     out.textContent = orderBy ? longDate(orderBy) : 'Enter your carrier\'s date';
     out.classList.toggle('is-empty', !orderBy);
     banner.replaceChildren(
-      document.createTextNode(orderBy ? 'Order by ' : 'Order by December '),
+      document.createTextNode(orderBy ? 'Recommended order-by date: ' : 'Recommended order-by date: December '),
       orderBy ? document.createTextNode(dayOfMonth(orderBy)) : fill('[date]'),
-      document.createTextNode(` for delivery before the 25th. Local pickup until ${pickup ? '' : 'December '}`),
+      document.createTextNode(', for expected delivery before December 25 with '),
+      fill('[shipping service]'),
+      document.createTextNode(' to '),
+      fill('[where you ship]'),
+      document.createTextNode(`. Local pickup until ${pickup ? '' : 'December '}`),
       pickup ? document.createTextNode(dayOfMonth(pickup)) : fill('[date]'),
       document.createTextNode('.')
     );
