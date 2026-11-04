@@ -409,16 +409,8 @@
       if (p.plat === 'etsy') where.push('Etsy');
       else if (p.plat === 'amazon') where.push('Amazon');
       else if (p.has('ch-market')) where.push('Etsy or Amazon');
-      day4.textContent = where.length ? `Save your five replies in ${joinList(where)}.` : day4.dataset.default;
-    }
-    const day5 = $('day-text-5');
-    if (day5) {
-      let tool = '';
-      if (p.workspace) tool = 'Gemini in Gmail';
-      else if (p.ai && p.ai !== 'None') tool = p.ai;
-      else if (p.answered) tool = 'ChatGPT or Claude';
-      const sorter = p.outlook ? 'rule' : 'filter';
-      day5.textContent = tool ? `Set up AI drafts in ${tool} and the Needs a person ${sorter}.` : day5.dataset.default;
+      const sorter4 = p.outlook ? 'rule' : 'filter';
+      day4.textContent = where.length ? `Save your other four replies in ${joinList(where)}, and switch on the Needs a person ${sorter4}.` : day4.dataset.default;
     }
   }
 
