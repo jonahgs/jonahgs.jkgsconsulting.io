@@ -201,7 +201,7 @@
     if (has('ch-igdm')) items.push(tool('Meta Business Suite FAQs and greeting', 'save-meta', 'Fixed answers on Instagram and Facebook.', ['Sends', 'Free']));
     if (has('ch-comments')) items.push(tool('Manychat comment-to-DM', 'prompt-7', 'Someone comments GIFT and gets your gift guide by DM. Free to test (about 25 people a month); paid plans about US$17 a month, or US$14 a month billed yearly. No follow-up messages.', ['Sends', 'Free to test']));
     if (has('ch-market')) items.push(tool('Saved replies on Etsy or Amazon', 'save-market', 'Etsy has saved replies in Messages. On Amazon, paste them from a document. Write them with prompt 4.', ['You send', 'Free']));
-    if (has('ch-phone')) items.push(tool('Your facts page by the phone', 'part-4', 'Read answers from the same page. This guide doesn\'t cover phone tools.', ['Free']));
+    if (has('ch-phone')) items.push(tool('Calls and texts: the same facts page', 'part-4', 'On calls, keep your facts page beside the phone. For texts, save your top replies as shortcuts on your phone (Text Replacement on iPhone, keyboard shortcuts on Android), and paste tricky texts into the reply prompt with names and numbers removed. Texting tools are a separate service with their own costs and consent rules, so this guide doesn\'t cover them. Want one set up? Book the call below.', ['Free']));
 
     if (channels.length || ai) {
       if (ai === 'ChatGPT' || ai === 'Claude') items.push(tool(`AI drafts in ${ai}`, 'drafts-setup', 'You already pay for it. Keep your facts page and the reply prompt in a Project.', ['Drafts', 'Included']));
