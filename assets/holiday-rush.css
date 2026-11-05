@@ -324,3 +324,5 @@ a.hr-setup-go::after { content: " \2197"; }
   .hr-builder-out, .hr-week-intro { position: static; }
 }
 .hr-link.is-armed { color: var(--rust); text-decoration-color: var(--rust); }
+.hr-gate-verdict { margin-top: 10px; }
+.hr-gate-verdict.is-ready { color: var(--ink, #243B32); font-weight: 600; }

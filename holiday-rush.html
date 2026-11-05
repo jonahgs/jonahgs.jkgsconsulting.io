@@ -230,6 +230,7 @@ If you'd rather change or cancel your order, just reply to this email.
                 <li><input type="checkbox" id="gate-5" data-save><label for="gate-5"><strong>The way out works.</strong> Every automatic reply says how to reach a person, and that route lands somewhere watched. Test it: send &ldquo;my order arrived broken&rdquo; through that channel and check it reaches the person who handles it.</label></li>
                 <li><input type="checkbox" id="gate-6" data-save><label for="gate-6"><strong>Someone owns it.</strong> One person checks automatic replies every week and updates them the day your facts change, like holiday hours or cutoffs. If one wrong answer goes out, switch it back to drafts.</label></li>
               </ul>
+              <p class="hr-note hr-gate-verdict" id="gate-verdict" aria-live="polite">0 of 6 ticked: keep it as a draft you check.</p>
             </div>
 
             <h3 class="hr-h" id="drafts">AI drafts you check</h3>
@@ -251,7 +252,7 @@ CUSTOMER MESSAGE:
               <div class="hr-more-body"><div class="hr-copy" id="copy-facts"><div class="hr-copy-head"><span class="hr-copy-label"><b>Practice shop facts</b> · Bayview Gift Co. is made up</span><button class="hr-copy-btn" type="button" data-copy="pre-facts">Copy</button></div><pre id="pre-facts">BAYVIEW GIFT CO. SHOP FACTS
 Pickup: Ottawa studio, Tuesday to Friday, noon to 5 pm, after you get your ready-for-pickup email.
 Dispatch: within 2 business days. Transit: 3 to 7 business days after dispatch.
-Returns: unused items within 30 days of delivery. Personalised items are final sale for a change of mind.
+Returns: unused items within 30 days of delivery. Personalised items: no returns if you change your mind.
 Support: damaged, faulty or wrong items, complaints and exceptions go to a person.
 We can't confirm by message: stock, order status, guaranteed arrival dates.</pre></div></div>
             </details>
@@ -353,6 +354,7 @@ Status: new / replied / closed</pre></div>
 <div class="field"><label for="fact-returns">Returns and exchanges</label><textarea id="fact-returns" rows="2" placeholder="How long, what condition, what is final sale" data-fact="Returns and exchanges" data-save></textarea></div>
 <div class="field"><label for="fact-payment">Payment</label><textarea id="fact-payment" rows="2" placeholder="Cards, gift cards, instalments" data-fact="Payment" data-save></textarea></div>
 <div class="field"><label for="fact-gifts">Gift options</label><textarea id="fact-gifts" rows="2" placeholder="Gift wrap, gift receipts, notes" data-fact="Gift options" data-save></textarea></div>
+<div class="field"><label for="fact-other">Anything else customers often ask</label><textarea id="fact-other" rows="2" placeholder="For example sizing, care, custom orders" data-fact="Anything else customers often ask" data-save></textarea></div>
 <div class="field"><label for="fact-cant">What we can&#x27;t confirm by message</label><textarea id="fact-cant" rows="2" placeholder="For example stock, order status, guaranteed arrival dates" data-fact="What we can&#x27;t confirm by message" data-save></textarea></div>
 <div class="field"><label for="fact-person">What always goes to a person</label><textarea id="fact-person" rows="2" placeholder="For example damage, complaints, refunds, exceptions" data-fact="What always goes to a person" data-save></textarea></div>
 <div class="field"><label for="fact-owner">Kept current by</label><textarea id="fact-owner" rows="2" placeholder="The person who updates this page" data-fact="Kept current by" data-save></textarea></div>
@@ -366,7 +368,7 @@ Status: new / replied / closed</pre></div>
               </div>
               <details class="hr-more">
                 <summary>Use prompt 2 instead: turn your website text into a facts page</summary>
-                <div class="hr-more-body"><div class="hr-copy"><div class="hr-copy-head"><span class="hr-copy-label"><b>Prompt 2 · Build your facts page</b></span><button class="hr-copy-btn" type="button" data-copy="pre-p2b">Copy</button></div><pre id="pre-p2b">Turn this text into one plain facts page with these headings: Pickup, Shipping and cutoffs, Returns and exchanges, Payment, Gift options, What we can't confirm by message, What always goes to a person.
+                <div class="hr-more-body"><div class="hr-copy"><div class="hr-copy-head"><span class="hr-copy-label"><b>Prompt 2 · Build your facts page</b></span><button class="hr-copy-btn" type="button" data-copy="pre-p2b">Copy</button></div><pre id="pre-p2b">Turn this text into one plain facts page with these headings: Pickup, Shipping and cutoffs, Returns and exchanges, Payment, Gift options, Anything else customers often ask, What we can't confirm by message, What always goes to a person.
 Don't add anything that isn't in my text.
 At the end, list any gaps, contradictions or unclear rules as questions for me.
 
@@ -450,7 +452,7 @@ Sort by how often it comes up.
 
 Website text: <mark>[paste]</mark>
 Messages: <mark>[paste]</mark></pre></div>
-              <div class="hr-copy" id="prompt-2"><div class="hr-copy-head"><span class="hr-copy-label"><b>Prompt 2 · Build your facts page</b> · Lab 2</span><button class="hr-copy-btn" type="button" data-copy="pre-p2">Copy</button></div><pre id="pre-p2">Turn this text into one plain facts page with these headings: Pickup, Shipping and cutoffs, Returns and exchanges, Payment, Gift options, What we can't confirm by message, What always goes to a person.
+              <div class="hr-copy" id="prompt-2"><div class="hr-copy-head"><span class="hr-copy-label"><b>Prompt 2 · Build your facts page</b> · Lab 2</span><button class="hr-copy-btn" type="button" data-copy="pre-p2">Copy</button></div><pre id="pre-p2">Turn this text into one plain facts page with these headings: Pickup, Shipping and cutoffs, Returns and exchanges, Payment, Gift options, Anything else customers often ask, What we can't confirm by message, What always goes to a person.
 Don't add anything that isn't in my text.
 At the end, list any gaps, contradictions or unclear rules as questions for me.
 

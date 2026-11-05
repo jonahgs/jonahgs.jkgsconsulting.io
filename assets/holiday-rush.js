@@ -252,6 +252,18 @@
     if (out) out.textContent = boxes.length && done === boxes.length ? 'All done. Time to check it worked.' : `${done} of ${boxes.length} done`;
   };
 
+  /* Part 3: the six checks */
+  const renderGate = () => {
+    const out = $('gate-verdict');
+    if (!out) return;
+    const boxes = Array.from(document.querySelectorAll('[id^="gate-"][type="checkbox"]'));
+    const done = boxes.filter(box => box.checked).length;
+    out.textContent = done === boxes.length
+      ? 'All six ticked: this one question can answer on its own. Check it every week, and switch it back to drafts after one wrong answer.'
+      : `${done} of ${boxes.length} ticked: keep it as a draft you check.`;
+    out.classList.toggle('is-ready', done === boxes.length);
+  };
+
   /* Part 2: order-by date */
   const parseDate = text => {
     const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(text || '');
@@ -422,6 +434,7 @@
     const id = changed ? changed.id : '';
     if (!changed || /^(ch-|q-)/.test(id)) { if (changed) expanded.clear(); renderSetup(); renderTailor(); renderWeek(); }
     if (!changed || id.startsWith('week-')) renderWeek();
+    if (!changed || id.startsWith('gate-')) renderGate();
     if (!changed || id.startsWith('calc-')) renderCalc();
     if (!changed || changed.dataset.fact) renderFacts();
   }
