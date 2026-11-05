@@ -31,10 +31,10 @@
   <link rel="stylesheet" href="assets/site.css?v=audience-photos-20261010">
   <link rel="stylesheet" href="assets/mobile-flow.css?v=20261010-2">
   <link rel="stylesheet" href="assets/refinement.css?v=20261010-7">
-  <link rel="stylesheet" href="assets/holiday-rush.css?v=20261104-4">
+  <link rel="stylesheet" href="assets/holiday-rush.css?v=20261105-1">
   <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Organization", "@id": "https://jkgsconsulting.com/#business", "name": "JKGS Consulting", "url": "https://jkgsconsulting.com/", "logo": "https://jkgsconsulting.com/assets/images/jkgs-vessel-v2.webp", "email": "info@jkgsconsulting.com", "areaServed": [{"@type": "City", "name": "Ottawa"}, {"@type": "Country", "name": "Canada"}], "founder": {"@type": "Person", "@id": "https://jkgsconsulting.com/about.html#jonah", "name": "Jonah Greenbaum-Shinder"}}, {"@context": "https://schema.org", "@type": "WebPage", "name": "Holiday Customer Messages: A Setup Guide for Small Shops | JKGS Consulting", "url": "https://jkgsconsulting.com/holiday-rush.html", "description": "A free step-by-step guide for small online shops: saved replies, AI drafts you check before sending, fewer \"Where's my order?\" emails and a clear handoff to a person. Starts with free tools.", "inLanguage": "en-CA", "author": {"@id": "https://jkgsconsulting.com/about.html#jonah"}, "publisher": {"@id": "https://jkgsconsulting.com/#business"}, "dateModified": "2026-11-04"}]</script>
   <script defer src="assets/site.js?v=2b39fdee7cd3"></script>
-  <script defer src="assets/holiday-rush.js?v=20261104-4"></script>
+  <script defer src="assets/holiday-rush.js?v=20261105-1"></script>
 </head>
 <body class="page-holiday-rush">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -105,6 +105,7 @@
                   <label><input type="checkbox" id="ch-market" data-save> Etsy or Amazon</label>
                   <label><input type="checkbox" id="ch-phone" data-save> Phone calls or texts</label>
                 </fieldset>
+                <div class="field"><label for="q-sell">What you sell</label><select id="q-sell" data-save><option value="">Choose one</option><option>Products</option><option>Services or bookings</option><option>Both</option></select></div>
                 <div class="form-pair">
                   <div class="field"><label for="q-platform">Where you sell</label><select id="q-platform" data-save><option value="">Choose one</option><option>Shopify</option><option>Wix</option><option>WooCommerce</option><option>Squarespace</option><option>Etsy only</option><option>Amazon only</option><option>Instagram or DMs, no website</option><option>Other</option></select></div>
                   <div class="field"><label for="q-email">Email</label><select id="q-email" data-save><option value="">Choose one</option><option>Gmail</option><option>Google Workspace</option><option>Outlook or Microsoft 365</option><option>Other</option></select></div>
@@ -165,6 +166,7 @@
           <summary><span class="hr-part-no">2</span><span class="hr-part-head"><span class="hr-part-title">Stop &ldquo;Where's my order?&rdquo; before it starts</span><span class="hr-part-sub">Six fixes for your platform, an order-by date calculator and a delay message.</span></span><span class="hr-part-meta"><span class="hr-chip is-free">No AI needed</span></span><span class="hr-plus" aria-hidden="true"></span></summary>
           <div class="hr-part-body">
             <p class="hr-tailored" hidden><span class="hr-tailored-text"></span><button type="button" class="hr-link" data-go="part-1">Change</button></p>
+            <p class="hr-note" data-when="services-only">This part is about shipped orders. Taking bookings instead? The same idea works: put the booking details in every confirmation, and post your cancellation policy where people book.</p>
             <p class="hr-lead">In many retail operations, &ldquo;Where's my order?&rdquo; can reach nearly half of customer contacts over Black Friday and Cyber Monday, by one industry estimate (<a href="https://www.concentrix.com/insights/blog/black-friday-contact-volume/" target="_blank" rel="noopener">Concentrix</a>). Your shop may differ, so count how many of last December's messages asked it. Then make tracking easy to find and warn people early, so fewer of these messages arrive.</p>
             <ul class="hr-checklist">
               <li><input type="checkbox" id="wismo-1" data-save><label for="wismo-1"><strong>Tracking in every shipping message.</strong> <span data-when="shopify">Shopify: Orders › open the order › Mark as fulfilled › enter the tracking number › tick Send a notification to the customer › Mark as fulfilled (<a href="https://help.shopify.com/manual/orders/status-tracking/add-tracking-numbers" target="_blank" rel="noopener">Shopify help</a>).</span><span data-when="p-wix">Wix: Orders › open the order › Add Tracking No › enter the number and carrier › tick Send shipping confirmation email › Apply (<a href="https://support.wix.com/en/article/wix-stores-adding-a-tracking-number-to-a-store-order" target="_blank" rel="noopener">Wix help</a>).</span><span data-when="p-woo">WooCommerce doesn&rsquo;t add tracking numbers by itself. Woo&rsquo;s <a href="https://woocommerce.com/products/shipment-tracking/" target="_blank" rel="noopener">Shipment Tracking</a> extension (about US$59 a year) puts them in order emails and the customer&rsquo;s account.</span><span data-when="p-etsy">Etsy: Shop Manager › Orders › Update progress › Complete order › choose the carrier and enter the tracking number › Preview buyer notification › Complete order (<a href="https://help.etsy.com/hc/en-us/articles/115015774228-How-to-Add-Tracking-and-Complete-an-Order" target="_blank" rel="noopener">Etsy help</a>). Labels bought through Etsy include tracking automatically.</span><span data-when="p-amazon">Amazon: add the tracking number when you confirm shipment. Buyers only see tracking for orders you ship yourself if you share it with Amazon; then it shows in their Your Orders page.</span><span data-when="p-social">When you ship, send the tracking link by DM or email the same day. Keep it as a saved reply: &ldquo;Your order is on its way: [tracking link]&rdquo;.</span><span data-when="p-generic">Enter the tracking number when you mark an order shipped, so it goes out in the shipping email. Search your platform&rsquo;s help for &ldquo;shipping confirmation tracking&rdquo;.</span></label></li>
@@ -349,9 +351,11 @@ Status: new / replied / closed</pre></div>
               <p>Fill in the headings and your facts page builds as you type. Or paste your website's shipping, returns, booking or FAQ text into prompt 2 and let AI sort it.</p>
               <div class="hr-builder">
                 <div class="hr-builder-fields">
-                  <div class="field"><label for="fact-pickup">Pickup</label><textarea id="fact-pickup" rows="2" placeholder="Where, which days and hours, and what to bring" data-fact="Pickup" data-save></textarea></div>
-<div class="field"><label for="fact-shipping">Shipping and cutoffs</label><textarea id="fact-shipping" rows="2" placeholder="Dispatch time, transit time, your order-by date" data-fact="Shipping and cutoffs" data-save></textarea></div>
-<div class="field"><label for="fact-returns">Returns and exchanges</label><textarea id="fact-returns" rows="2" placeholder="How long, what condition, what is final sale" data-fact="Returns and exchanges" data-save></textarea></div>
+                  <div class="field" data-when="products"><label for="fact-pickup">Pickup</label><textarea id="fact-pickup" rows="2" placeholder="Where, which days and hours, and what to bring" data-fact="Pickup" data-save></textarea></div>
+<div class="field" data-when="products"><label for="fact-shipping">Shipping and cutoffs</label><textarea id="fact-shipping" rows="2" placeholder="Dispatch time, transit time, your order-by date" data-fact="Shipping and cutoffs" data-save></textarea></div>
+<div class="field" data-when="products"><label for="fact-returns">Returns and exchanges</label><textarea id="fact-returns" rows="2" placeholder="How long, what condition, what is final sale" data-fact="Returns and exchanges" data-save></textarea></div>
+<div class="field" data-when="services"><label for="fact-booking">Booking and cancellations</label><textarea id="fact-booking" rows="2" placeholder="How to book, notice to cancel or reschedule, deposits, no-shows" data-fact="Booking and cancellations" data-save></textarea></div>
+<div class="field" data-when="services-only"><label for="fact-refunds">Refunds</label><textarea id="fact-refunds" rows="2" placeholder="When you refund, and how much" data-fact="Refunds" data-save></textarea></div>
 <div class="field"><label for="fact-payment">Payment</label><textarea id="fact-payment" rows="2" placeholder="Cards, gift cards, instalments" data-fact="Payment" data-save></textarea></div>
 <div class="field"><label for="fact-gifts">Gift options</label><textarea id="fact-gifts" rows="2" placeholder="Gift wrap, gift receipts, notes" data-fact="Gift options" data-save></textarea></div>
 <div class="field"><label for="fact-other">Anything else customers often ask</label><textarea id="fact-other" rows="2" placeholder="For example sizing, care, custom orders" data-fact="Anything else customers often ask" data-save></textarea></div>
@@ -394,7 +398,8 @@ Facts page:
 
 Questions:
 <mark>[paste]</mark></pre></div>
-              <p class="hr-note">No list of questions yet? Start with these: When's the last day to order for delivery before the 25th? Where's my order? Can I return or exchange it? Do you gift wrap or include a gift receipt? Can I pick up, and when?</p>
+              <p class="hr-note" data-when="services">Taking bookings? Start with these: Do you have anything open on [date]? How do I reschedule? What's your cancellation policy? Do you take a deposit? How long does it take?</p>
+              <p class="hr-note" data-when="products">No list of questions yet? Start with these: When's the last day to order for delivery before the 25th? Where's my order? Can I return or exchange it? Do you gift wrap or include a gift receipt? Can I pick up, and when?</p>
             </div>
 
             <div class="hr-step" id="save-replies">
