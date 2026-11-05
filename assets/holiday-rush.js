@@ -174,9 +174,9 @@
   const renderSetup = () => {
     if (!setupOut) return;
     const items = [
-      tool('Your facts page', 'part-4', 'Every reply comes from it.', ['Free']),
-      tool('Order-status fixes', 'part-2', 'Tracking links, an order-by date and a delay email.', ['Free', 'No AI'])
+      tool('Your facts page', 'part-4', 'Every reply comes from it.', ['Free'])
     ];
+    if (value('q-sell') !== 'Services or bookings') items.push(tool('Order-status fixes', 'part-2', 'Tracking links, an order-by date and a delay email.', ['Free', 'No AI']));
     const platform = value('q-platform');
     const email = value('q-email');
     const ai = value('q-ai');
@@ -201,6 +201,8 @@
     if (has('ch-igdm')) items.push(tool('Meta Business Suite FAQs and greeting', 'save-meta', 'Fixed answers on Instagram and Facebook.', ['Sends', 'Free']));
     if (has('ch-comments')) items.push(tool('Manychat comment-to-DM', 'prompt-7', 'Someone comments GIFT and gets your gift guide by DM. Free to test (about 25 people a month); paid plans about US$17 a month, or US$14 a month billed yearly. No follow-up messages.', ['Sends', 'Free to test']));
     if (has('ch-market')) items.push(tool('Saved replies on Etsy or Amazon', 'save-market', 'Etsy has saved replies in Messages. On Amazon, paste them from a document. Write them with prompt 4.', ['You send', 'Free']));
+    const sell = value('q-sell');
+    if (sell === 'Services or bookings' || sell === 'Both') items.push(tool('Booking and cancellation facts', 'part-4', 'Add how to book, reschedule and cancel to your facts page, so replies can answer booking questions.', ['Free']));
     if (has('ch-phone')) items.push(tool('Calls and texts: the same facts page', 'part-4', 'On calls, keep your facts page beside the phone. For texts, save your top replies as shortcuts on your phone (Text Replacement on iPhone, keyboard shortcuts on Android), and paste tricky texts into the reply prompt with names and numbers removed. Texting tools are a separate service with their own costs and consent rules, so this guide doesn\'t cover them. Want one set up? Book the call below.', ['Free']));
 
     if (channels.length || ai) {
@@ -316,6 +318,7 @@
     if (!out) return;
     out.replaceChildren(document.createTextNode('SHOP FACTS'));
     document.querySelectorAll('[data-fact]').forEach(row => {
+      if (row.closest('[hidden]')) return;
       const text = row.value.trim();
       out.append(`\n${row.dataset.fact}: `);
       if (text) {
@@ -335,13 +338,17 @@
     const platform = value('q-platform');
     const email = value('q-email');
     const ai = value('q-ai');
+    const sell = value('q-sell');
     const channels = CHANNELS.filter(id => value(id));
     const has = id => channels.includes(id);
     const PLAT = { 'Shopify': 'shopify', 'Wix': 'wix', 'WooCommerce': 'woo', 'Squarespace': 'squarespace', 'Etsy only': 'etsy', 'Amazon only': 'amazon', 'Instagram or DMs, no website': 'social', 'Other': 'other' };
     const plat = PLAT[platform] || '';
     return {
       platform, plat, email, ai, channels, has,
-      answered: Boolean(platform || email || ai || channels.length),
+      sell,
+      services: sell === 'Services or bookings' || sell === 'Both',
+      servicesOnly: sell === 'Services or bookings',
+      answered: Boolean(platform || email || ai || sell || channels.length),
       shopify: platform === 'Shopify',
       google: email === 'Gmail' || email === 'Google Workspace',
       workspace: email === 'Google Workspace',
@@ -365,7 +372,10 @@
     outlook: p => p.outlook,
     'email-other': p => p.emailOther,
     'email-unknown': p => !p.email,
-    instagram: p => !p.answered || p.has('ch-igdm') || p.has('ch-comments')
+    instagram: p => !p.answered || p.has('ch-igdm') || p.has('ch-comments'),
+    services: p => p.services,
+    'services-only': p => p.servicesOnly,
+    products: p => !p.servicesOnly
   };
   const FIT = {
     'save-shopify': p => p.shopify,
@@ -396,12 +406,28 @@
       }
     });
   }
+  function tailorPrompt2(p) {
+    document.querySelectorAll('[id^="pre-p2"]').forEach(pre => {
+      if (!pre.dataset.base) pre.dataset.base = pre.innerHTML;
+      let html = pre.dataset.base;
+      if (p.services) {
+        html = html
+          .replace('Pickup, Shipping and cutoffs, Returns and exchanges, Payment,', p.servicesOnly
+            ? 'Booking and cancellations, Refunds, Payment,'
+            : 'Pickup, Shipping and cutoffs, Returns and exchanges, Booking and cancellations, Payment,')
+          .replace(', such as Booking and cancellations.', '.');
+      }
+      pre.innerHTML = html;
+    });
+  }
+
   function renderTailor() {
     const p = profile();
     document.querySelectorAll('[data-when]').forEach(el => {
       const tests = el.dataset.when.split(/\s+/).map(key => WHEN[key]).filter(Boolean);
       el.hidden = tests.length ? !tests.some(test => test(p)) : false;
     });
+    tailorPrompt2(p);
     applyGroups(p);
     const names = [];
     const PLAT_NAME = { etsy: 'Etsy', amazon: 'Amazon', social: 'Instagram' };
@@ -432,7 +458,7 @@
 
   function refresh(changed) {
     const id = changed ? changed.id : '';
-    if (!changed || /^(ch-|q-)/.test(id)) { if (changed) expanded.clear(); renderSetup(); renderTailor(); renderWeek(); }
+    if (!changed || /^(ch-|q-)/.test(id)) { if (changed) expanded.clear(); renderSetup(); renderTailor(); renderWeek(); renderFacts(); }
     if (!changed || id.startsWith('week-')) renderWeek();
     if (!changed || id.startsWith('gate-')) renderGate();
     if (!changed || id.startsWith('calc-')) renderCalc();
