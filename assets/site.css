@@ -36,7 +36,7 @@ li { padding-left: .2rem; }
 .narrow { max-width: 830px; }
 .section { padding-block: var(--section-space); }
 .wash { background: var(--wash); }
-.eyebrow { margin: 0 0 24px; color: var(--muted); font: 600 .67rem/1.5 var(--body); letter-spacing: .145em; text-transform: uppercase; }
+.eyebrow { margin: 0 0 24px; color: var(--muted); font: 600 .72rem/1.5 var(--body); letter-spacing: .145em; text-transform: uppercase; }
 .eyebrow a { text-decoration: underline; text-underline-offset: 4px; }
 .number { color: var(--muted); font: 500 .72rem/1.6 var(--body); letter-spacing: .05em; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
@@ -54,7 +54,7 @@ li { padding-left: .2rem; }
 .brand { display: inline-flex; align-items: center; gap: 9px; flex-shrink: 0; }
 .brand img { width: 53px; height: 53px; object-fit: contain; }
 .brand > span { font: 600 1.85rem/1 var(--body); letter-spacing: -.035em; }
-.brand-sub { display: block; font-size: .53rem; font-weight: 600; letter-spacing: .18em; margin-top: 6px; }
+.brand-sub { display: block; font-size: .62rem; font-weight: 600; letter-spacing: .18em; margin-top: 6px; }
 .desktop-nav { margin-left: auto; display: flex; align-items: center; gap: 31px; }
 .desktop-nav a { position: relative; font-size: .84rem; padding-block: 10px; }
 .desktop-nav a:hover, .desktop-nav a[aria-current] { text-decoration: underline; text-underline-offset: 7px; text-decoration-color: var(--brass); }

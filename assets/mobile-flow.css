@@ -95,7 +95,7 @@
  .page-intro h1, .intro-text h1 { font-size: clamp(2.15rem,9.2vw,3.5rem); line-height: 1.1; }
  .intro-copy { font-size: 1rem; line-height: 1.7; margin-top: 20px; }
  .page-intro h1 br { display: none; }
- .eyebrow { font-size: .68rem; margin-bottom: 18px; }
+ .eyebrow { font-size: .72rem; margin-bottom: 18px; }
  .editorial-grid { gap: 28px; padding-block: 42px; }
  .lined-list, .about-aside { padding: 24px; }
  .lined-list li, .about-aside p { font-size: .95rem !important; }
