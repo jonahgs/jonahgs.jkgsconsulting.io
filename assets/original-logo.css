@@ -1,0 +1,13 @@
+/* Original historical artwork, arranged horizontally for the existing logo slots.
+   The SVG uses the unchanged source PNG and preserves each component's proportions. */
+.brand img.original-logo { display: block; width: 208px; height: auto; object-fit: contain; }
+.footer-brand.original-brand { display: inline-flex; align-items: center; width: fit-content; max-width: 100%; padding: 10px 12px; border: 0; border-radius: 3px; background: var(--paper, #f7f5ef); }
+.footer-top .footer-identity .footer-brand.original-brand { padding: 10px 12px; }
+.footer-brand.original-brand img { display: block; width: 164px; height: auto; max-width: 100%; }
+@media (max-width: 760px) {
+  .brand img.original-logo { width: 180px; }
+}
+@media (max-width: 380px) {
+  .brand img.original-logo { width: 164px; }
+  .footer-brand.original-brand img { width: 140px; }
+}
